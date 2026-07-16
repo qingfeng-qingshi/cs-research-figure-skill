@@ -1,0 +1,5 @@
+﻿variant,metric,value
+Full model,Accuracy (%),87.3
+w/o graph reasoning,Accuracy (%),84.8
+w/o cross-modal attention,Accuracy (%),85.6
+w/o adaptive fusion,Accuracy (%),86.1

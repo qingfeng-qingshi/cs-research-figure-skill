@@ -1,0 +1,8 @@
+﻿interface:
+  display_name: "CS Research Figure Studio"
+  short_description: "Design editable CS and AI research figures"
+  brand_color: "#2F6F9F"
+  default_prompt: "Use $draw-cs-research-figures to turn my method description or reference image into a publication-ready editable research figure."
+
+policy:
+  allow_implicit_invocation: true

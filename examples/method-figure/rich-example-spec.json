@@ -1,0 +1,45 @@
+﻿{
+  "canvas": {"width": 1800, "height": 1000, "background": "#FFFFFF"},
+  "title": "Graph-Guided Multimodal Representation Learning",
+  "panels": [
+    {"id":"p1","label":"Multimodal Inputs","x":35,"y":95,"w":285,"h":820,"fill":"#F3F7FA"},
+    {"id":"p2","label":"View-specific Encoding","x":350,"y":95,"w":410,"h":820,"fill":"#EDF5FA"},
+    {"id":"p3","label":"Proposed Graph-Guided Fusion","x":790,"y":95,"w":650,"h":820,"fill":"#F7F2FA"},
+    {"id":"p4","label":"Predictions and Objectives","x":1470,"y":95,"w":295,"h":820,"fill":"#F2F8F1"}
+  ],
+  "nodes": [
+    {"id":"doc","panel":"p1","label":"Image / Document","kind":"document","x":78,"y":175,"w":200,"h":155,"fill":"#E1EEF6"},
+    {"id":"text","panel":"p1","label":"Text Tokens","kind":"tokens","x":78,"y":400,"w":200,"h":130,"fill":"#EEF0F7"},
+    {"id":"meta","panel":"p1","label":"Metadata Graph","kind":"graph","x":78,"y":610,"w":200,"h":190,"fill":"#EEF5EA"},
+    {"id":"vision","panel":"p2","label":"Multi-scale Visual Features","kind":"tensor","x":410,"y":155,"w":285,"h":190,"fill":"#D9ECF5"},
+    {"id":"language","panel":"p2","label":"Transformer Encoder","kind":"stack","x":410,"y":395,"w":285,"h":230,"fill":"#E3EBF3"},
+    {"id":"graphenc","panel":"p2","label":"Graph Encoder","kind":"model","x":410,"y":685,"w":285,"h":150,"fill":"#E2F0E0"},
+    {"id":"align","panel":"p3","label":"Cross-modal Attention","kind":"attention","x":835,"y":145,"w":250,"h":235,"fill":"#F7DFD3"},
+    {"id":"relation","panel":"p3","label":"Learned Relation Graph","kind":"graph","x":1140,"y":145,"w":245,"h":235,"fill":"#E6F1E3"},
+    {"id":"fusion","panel":"p3","label":"Adaptive Fusion Block","kind":"stack","x":930,"y":465,"w":320,"h":285,"fill":"#E9DFF2","stroke":"#7E5AA6"},
+    {"id":"joint","panel":"p3","label":"Joint Representation","kind":"tensor","x":1045,"y":795,"w":210,"h":100,"fill":"#D9E8F4"},
+    {"id":"prediction","panel":"p4","label":"Task Prediction","kind":"plot","x":1510,"y":190,"w":215,"h":175,"fill":"#E1F1DF"},
+    {"id":"explain","panel":"p4","label":"Graph Explanation","kind":"graph","x":1510,"y":430,"w":215,"h":190,"fill":"#F5ECD8"},
+    {"id":"taskloss","panel":"p4","label":"Task Loss","kind":"loss","x":1518,"y":700,"w":195,"h":70,"fill":"#F8DFDC","stroke":"#C96E66"},
+    {"id":"alignloss","panel":"p4","label":"Alignment Loss","kind":"loss","x":1518,"y":805,"w":195,"h":70,"fill":"#E9E0F4","stroke":"#8062A8"}
+  ],
+  "edges": [
+    {"id":"e1","source":"doc","target":"vision","label":"pixels / regions","style":"solid"},
+    {"id":"e2","source":"text","target":"language","label":"token sequence","style":"solid"},
+    {"id":"e3","source":"meta","target":"graphenc","label":"nodes and edges","style":"solid"},
+    {"id":"e4","source":"vision","target":"align","label":"visual tokens","style":"solid"},
+    {"id":"e5","source":"language","target":"align","label":"text tokens","style":"solid"},
+    {"id":"e6","source":"graphenc","target":"relation","label":"structural prior","style":"solid"},
+    {"id":"e7","source":"align","target":"relation","label":"affinity","style":"solid"},
+    {"id":"e8","source":"align","target":"fusion","label":"aligned features","style":"solid"},
+    {"id":"e9","source":"relation","target":"fusion","label":"message weights","style":"solid"},
+    {"id":"e10","source":"fusion","target":"joint","label":"fused tensor","style":"solid"},
+    {"id":"e11","source":"joint","target":"prediction","label":"prediction head","style":"solid"},
+    {"id":"e12","source":"joint","target":"explain","label":"relation scores","style":"solid"},
+    {"id":"e13","source":"prediction","target":"taskloss","label":"supervision","style":"dashed","color":"#C96E66"},
+    {"id":"e14","source":"align","target":"alignloss","label":"cross-modal objective","style":"dashed","color":"#8062A8"}
+  ],
+  "annotations": [
+    {"id":"a1","label":"Innovation zoom-in","x":905,"y":438,"w":370,"h":335,"color":"#A25B8B"}
+  ]
+}

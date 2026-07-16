@@ -1,0 +1,5 @@
+﻿variant,metric,value
+Baseline CNN,Accuracy (%),82.4
+Baseline Transformer,Accuracy (%),84.1
+Graph Model,Accuracy (%),85.0
+Proposed Method,Accuracy (%),87.3

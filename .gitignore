@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+.DS_Store
+Thumbs.db
+output/
+test-output/
+dist/
+*.zip
+*.egg-info/
+# Local legacy preview files; the current renderer regenerates valid SVGs.
+examples/method-figure/rich-example.svg
+skill/draw-cs-research-figures/assets/rich-example.svg

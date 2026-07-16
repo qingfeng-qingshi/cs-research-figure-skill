@@ -1,0 +1,25 @@
+﻿{
+  "canvas": {"width": 1600, "height": 900, "background": "#FFFFFF"},
+  "title": "Retrieval-Augmented Multimodal Assistant",
+  "panels": [
+    {"id": "p1", "label": "Perception", "x": 45, "y": 110, "w": 430, "h": 650, "fill": "#EEF5FA"},
+    {"id": "p2", "label": "Grounding and Reasoning", "x": 520, "y": 110, "w": 620, "h": 650, "fill": "#F5F0FA"},
+    {"id": "p3", "label": "Response", "x": 1185, "y": 110, "w": 370, "h": 650, "fill": "#EFF7EF"}
+  ],
+  "nodes": [
+    {"id": "image", "panel": "p1", "label": "Image / Document", "kind": "data", "x": 105, "y": 245, "w": 300, "h": 90, "fill": "#DCEBF5"},
+    {"id": "encoder", "panel": "p1", "label": "Vision Encoder", "kind": "model", "x": 105, "y": 455, "w": 300, "h": 100, "fill": "#CFE4F2"},
+    {"id": "query", "panel": "p2", "label": "Query Bridge", "kind": "model", "x": 585, "y": 245, "w": 220, "h": 95, "fill": "#E3D8F0"},
+    {"id": "retriever", "panel": "p2", "label": "Evidence Retriever", "kind": "retrieval", "x": 865, "y": 245, "w": 220, "h": 95, "fill": "#F8E5BF"},
+    {"id": "llm", "panel": "p2", "label": "Language Model", "kind": "model", "x": 720, "y": 500, "w": 260, "h": 110, "fill": "#D8C7E8"},
+    {"id": "answer", "panel": "p3", "label": "Grounded Answer", "kind": "output", "x": 1235, "y": 330, "w": 270, "h": 110, "fill": "#DCEEDC"}
+  ],
+  "edges": [
+    {"id": "e1", "source": "image", "target": "encoder", "label": "pixels", "style": "solid"},
+    {"id": "e2", "source": "encoder", "target": "query", "label": "visual tokens", "style": "solid"},
+    {"id": "e3", "source": "query", "target": "retriever", "label": "query", "style": "solid"},
+    {"id": "e4", "source": "query", "target": "llm", "label": "prompt tokens", "style": "solid"},
+    {"id": "e5", "source": "retriever", "target": "llm", "label": "top-k evidence", "style": "dashed"},
+    {"id": "e6", "source": "llm", "target": "answer", "label": "generation", "style": "solid"}
+  ]
+}
