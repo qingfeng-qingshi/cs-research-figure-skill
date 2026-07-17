@@ -1,9 +1,11 @@
-import subprocess
+﻿import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
 from xml.etree import ElementTree as ET
+
+from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -33,6 +35,7 @@ class RepositoryTests(unittest.TestCase):
 
     def test_method_svg_generation(self):
         spec = EXAMPLES / "method-figure" / "rich-example-spec.json"
+        ET.parse(EXAMPLES / "method-figure" / "rich-example.svg")
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "method.svg"
             result = run(SCRIPTS / "validate_figure_spec.py", spec)
@@ -42,6 +45,19 @@ class RepositoryTests(unittest.TestCase):
             ids = {element.attrib.get("id") for element in root.iter()}
             self.assertIn("figure-title-1", ids)
             self.assertIn("fusion", ids)
+
+    def test_readme_preview_is_not_an_xml_error_page(self):
+        preview = EXAMPLES / "method-figure" / "rich-example-preview.png"
+        with Image.open(preview) as image:
+            self.assertEqual(image.format, "PNG")
+            self.assertEqual(image.size, (1800, 1000))
+            top = image.convert("RGB").crop((0, 0, image.width, 260))
+            pixels = list(top.getdata())
+            pink = sum(
+                1 for red, green, blue in pixels
+                if red > 240 and 185 < green < 238 and 185 < blue < 238
+            )
+            self.assertLess(pink / len(pixels), 0.08)
 
     def test_comparison_plot_generation(self):
         source = EXAMPLES / "comparison" / "demo-comparison.csv"
@@ -82,6 +98,9 @@ class RepositoryTests(unittest.TestCase):
             self.assertIn("Sensitivity Analysis of Feature-Combination", text)
             self.assertIn("Depth Across Multiple Evaluation Settings", text)
             self.assertIn("<text", text)
+
+    def test_repository_has_no_duplicate_packager(self):
+        self.assertFalse((ROOT / "scriptspackage_skill.py").exists())
 
 
 if __name__ == "__main__":

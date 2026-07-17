@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1000" viewBox="0 0 1800 1000">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="context-stroke"/></marker><filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#20364A" flood-opacity=".12"/></filter></defs>
+<rect width="1800" height="1000" fill="#FFFFFF"/>
+<text id="figure-title-1" x="900.0" y="58" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#172B4D">Graph-Guided Multimodal Representation Learning</text>
+<g id="p1"><rect x="35" y="95" width="285" height="820" rx="26" fill="#F3F7FA" stroke="#CAD5DE" stroke-width="2"/>
+<text x="59" y="137" font-family="Arial" font-size="23" font-weight="700" fill="#172B4D">Multimodal Inputs</text></g>
+<g id="p2"><rect x="350" y="95" width="410" height="820" rx="26" fill="#EDF5FA" stroke="#CAD5DE" stroke-width="2"/>
+<text x="374" y="137" font-family="Arial" font-size="23" font-weight="700" fill="#172B4D">View-specific Encoding</text></g>
+<g id="p3"><rect x="790" y="95" width="650" height="820" rx="26" fill="#F7F2FA" stroke="#CAD5DE" stroke-width="2"/>
+<text x="814" y="137" font-family="Arial" font-size="23" font-weight="700" fill="#172B4D">Proposed Graph-Guided Fusion</text></g>
+<g id="p4"><rect x="1470" y="95" width="295" height="820" rx="26" fill="#F2F8F1" stroke="#CAD5DE" stroke-width="2"/>
+<text x="1494" y="137" font-family="Arial" font-size="23" font-weight="700" fill="#172B4D">Predictions and Objectives</text></g>
+<g id="e1"><path d="M 278.0 252.5 L 410.0 250.0" fill="none" stroke="#47789E" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="344.0" y="241.2" text-anchor="middle" font-family="Arial" font-size="16" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="8">pixels / regions</text>
+</g>
+<g id="e2"><path d="M 278.0 465.0 L 410.0 510.0" fill="none" stroke="#47789E" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="344.0" y="477.5" text-anchor="middle" font-family="Arial" font-size="16" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="8">token sequence</text>
+</g>
+<g id="e3"><path d="M 278.0 705.0 L 410.0 760.0" fill="none" stroke="#47789E" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="344.0" y="722.5" text-anchor="middle" font-family="Arial" font-size="16" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="8">nodes and edges</text>
+</g>
+<g id="e4"><path d="M 695.0 250.0 L 835.0 262.5" fill="none" stroke="#47789E" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="765.0" y="246.2" text-anchor="middle" font-family="Arial" font-size="16" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="8">visual tokens</text>
+</g>
+<g id="e5"><path d="M 695.0 510.0 L 835.0 262.5" fill="none" stroke="#47789E" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="765.0" y="376.2" text-anchor="middle" font-family="Arial" font-size="16" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="8">text tokens</text>
+</g>
+<g id="e6"><path d="M 552.5 685.0 L 1262.5 380.0" fill="none" stroke="#47789E" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="907.5" y="522.5" text-anchor="middle" font-family="Arial" font-size="16" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="8">structural prior</text>
+</g>
+<g id="e7"><path d="M 1085.0 262.5 L 1140.0 262.5" fill="none" stroke="#47789E" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="1112.5" y="252.5" text-anchor="middle" font-family="Arial" font-size="16" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="8">affinity</text>
+</g>
+<g id="e8"><path d="M 960.0 380.0 L 1090.0 465.0" fill="none" stroke="#47789E" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="1025.0" y="412.5" text-anchor="middle" font-family="Arial" font-size="16" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="8">aligned features</text>
+</g>
+<g id="e9"><path d="M 1262.5 380.0 L 1090.0 465.0" fill="none" stroke="#47789E" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="1176.2" y="412.5" text-anchor="middle" font-family="Arial" font-size="16" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="8">message weights</text>
+</g>
+<g id="e10"><path d="M 1090.0 750.0 L 1150.0 795.0" fill="none" stroke="#47789E" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="1120.0" y="762.5" text-anchor="middle" font-family="Arial" font-size="16" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="8">fused tensor</text>
+</g>
+<g id="e11"><path d="M 1150.0 795.0 L 1617.5 365.0" fill="none" stroke="#47789E" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="1383.8" y="570.0" text-anchor="middle" font-family="Arial" font-size="16" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="8">prediction head</text>
+</g>
+<g id="e12"><path d="M 1150.0 795.0 L 1617.5 620.0" fill="none" stroke="#47789E" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="1383.8" y="697.5" text-anchor="middle" font-family="Arial" font-size="16" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="8">relation scores</text>
+</g>
+<g id="e13"><path d="M 1617.5 365.0 L 1615.5 700.0" fill="none" stroke="#C96E66" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#arrow)"/>
+<text x="1616.5" y="522.5" text-anchor="middle" font-family="Arial" font-size="16" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="8">supervision</text>
+</g>
+<g id="e14"><path d="M 1085.0 262.5 L 1518.0 840.0" fill="none" stroke="#8062A8" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#arrow)"/>
+<text x="1301.5" y="541.2" text-anchor="middle" font-family="Arial" font-size="16" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="8">cross-modal objective</text>
+</g>
+<g id="doc" filter="url(#shadow)"><rect x="78" y="175" width="200" height="155" rx="16" fill="#E1EEF6" stroke="#426986" stroke-width="2.5"/>
+<path d="M 146.0 193 H 190.8 L 210.0 213.0 V 273 H 146.0 Z" fill="#FFFFFF" stroke="#3D6078" stroke-width="2.5"/>
+<path d="M 190.8 193 V 213.0 H 210.0" fill="none" stroke="#3D6078" stroke-width="2"/>
+<line x1="158.0" y1="227.4" x2="198.0" y2="227.4" stroke="#9BAFBD" stroke-width="2"/>
+<line x1="158.0" y1="240.4" x2="198.0" y2="240.4" stroke="#9BAFBD" stroke-width="2"/>
+<line x1="158.0" y1="253.4" x2="198.0" y2="253.4" stroke="#9BAFBD" stroke-width="2"/>
+<text x="178.0" y="312" text-anchor="middle" font-family="Arial" font-size="18" font-weight="600" fill="#172B4D">Image / Document</text>
+</g>
+<g id="text" filter="url(#shadow)"><rect x="78" y="400" width="200" height="130" rx="16" fill="#EEF0F7" stroke="#426986" stroke-width="2.5"/>
+<rect x="102.0" y="433" width="17.4" height="38" rx="4" fill="#76B7D8" stroke="#3D6078" stroke-width="1.5"/>
+<rect x="124.4" y="441" width="17.4" height="38" rx="4" fill="#90C6A0" stroke="#3D6078" stroke-width="1.5"/>
+<rect x="146.9" y="433" width="17.4" height="38" rx="4" fill="#E9B66C" stroke="#3D6078" stroke-width="1.5"/>
+<rect x="169.3" y="441" width="17.4" height="38" rx="4" fill="#B39AD5" stroke="#3D6078" stroke-width="1.5"/>
+<rect x="191.7" y="433" width="17.4" height="38" rx="4" fill="#76B7D8" stroke="#3D6078" stroke-width="1.5"/>
+<rect x="214.1" y="441" width="17.4" height="38" rx="4" fill="#90C6A0" stroke="#3D6078" stroke-width="1.5"/>
+<rect x="236.6" y="433" width="17.4" height="38" rx="4" fill="#E9B66C" stroke="#3D6078" stroke-width="1.5"/>
+<text x="178.0" y="512" text-anchor="middle" font-family="Arial" font-size="18" font-weight="600" fill="#172B4D">Text Tokens</text>
+</g>
+<g id="meta" filter="url(#shadow)"><rect x="78" y="610" width="200" height="190" rx="16" fill="#EEF5EA" stroke="#426986" stroke-width="2.5"/>
+<line x1="122.0" y1="670.4" x2="178.0" y2="653.6" stroke="#3D6078" stroke-width="2"/>
+<line x1="178.0" y1="653.6" x2="234.0" y2="674.0" stroke="#3D6078" stroke-width="2"/>
+<line x1="122.0" y1="670.4" x2="142.0" y2="713.6" stroke="#3D6078" stroke-width="2"/>
+<line x1="178.0" y1="653.6" x2="202.0" y2="718.4" stroke="#3D6078" stroke-width="2"/>
+<line x1="234.0" y1="674.0" x2="242.0" y2="706.4" stroke="#3D6078" stroke-width="2"/>
+<line x1="142.0" y1="713.6" x2="202.0" y2="718.4" stroke="#3D6078" stroke-width="2"/>
+<line x1="202.0" y1="718.4" x2="242.0" y2="706.4" stroke="#3D6078" stroke-width="2"/>
+<line x1="234.0" y1="674.0" x2="202.0" y2="718.4" stroke="#3D6078" stroke-width="2"/>
+<circle cx="122.0" cy="670.4" r="10" fill="#9DC7E0" stroke="#3D6078" stroke-width="2"/>
+<circle cx="178.0" cy="653.6" r="10" fill="#F0BC8C" stroke="#3D6078" stroke-width="2"/>
+<circle cx="234.0" cy="674.0" r="10" fill="#A9D3A5" stroke="#3D6078" stroke-width="2"/>
+<circle cx="142.0" cy="713.6" r="10" fill="#C2AEDC" stroke="#3D6078" stroke-width="2"/>
+<circle cx="202.0" cy="718.4" r="10" fill="#F2A7A7" stroke="#3D6078" stroke-width="2"/>
+<circle cx="242.0" cy="706.4" r="10" fill="#9DC7E0" stroke="#3D6078" stroke-width="2"/>
+<text x="178.0" y="782" text-anchor="middle" font-family="Arial" font-size="18" font-weight="600" fill="#172B4D">Metadata Graph</text>
+</g>
+<g id="vision" filter="url(#shadow)"><rect x="410" y="155" width="285" height="190" rx="16" fill="#D9ECF5" stroke="#426986" stroke-width="2.5"/>
+<rect x="442" y="193" width="195" height="98" rx="5" fill="#D8EEF5" stroke="#3D6078" stroke-width="2"/>
+<rect x="455" y="183" width="195" height="98" rx="5" fill="#C5E3F0" stroke="#3D6078" stroke-width="2"/>
+<rect x="468" y="173" width="195" height="98" rx="5" fill="#A9D5E8" stroke="#3D6078" stroke-width="2"/>
+<line x1="510.5" y1="193" x2="510.5" y2="299" stroke="#FFFFFF" stroke-width="1.5" opacity=".9"/>
+<line x1="553.0" y1="193" x2="553.0" y2="299" stroke="#FFFFFF" stroke-width="1.5" opacity=".9"/>
+<line x1="595.5" y1="193" x2="595.5" y2="299" stroke="#FFFFFF" stroke-width="1.5" opacity=".9"/>
+<text x="552.5" y="327" text-anchor="middle" font-family="Arial" font-size="18" font-weight="600" fill="#172B4D">Multi-scale Visual Features</text>
+</g>
+<g id="language" filter="url(#shadow)"><rect x="410" y="395" width="285" height="230" rx="16" fill="#E3EBF3" stroke="#426986" stroke-width="2.5"/>
+<rect x="420" y="431" width="240" height="132" rx="9" fill="#E8EEF4" stroke="#3D6078" stroke-width="1.5" opacity="0.9299999999999999"/>
+<rect x="425" y="425" width="240" height="132" rx="9" fill="#E8EEF4" stroke="#3D6078" stroke-width="1.5" opacity="0.77"/>
+<rect x="430" y="419" width="240" height="132" rx="9" fill="#E8EEF4" stroke="#3D6078" stroke-width="1.5" opacity="0.61"/>
+<rect x="452" y="435.0" width="201" height="36.666666666666664" rx="5" fill="#AFC7DC" stroke="#3D6078" stroke-width="1.5"/>
+<text x="552.5" y="458.3333333333333" text-anchor="middle" font-family="Arial" font-size="14" fill="#19324A">Projection</text>
+<rect x="452" y="477.6666666666667" width="201" height="36.666666666666664" rx="5" fill="#F3B978" stroke="#3D6078" stroke-width="1.5"/>
+<text x="552.5" y="501.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#19324A">Gated Fusion</text>
+<rect x="452" y="520.3333333333334" width="201" height="36.666666666666664" rx="5" fill="#9BCF9B" stroke="#3D6078" stroke-width="1.5"/>
+<text x="552.5" y="543.6666666666667" text-anchor="middle" font-family="Arial" font-size="14" fill="#19324A">Normalization</text>
+<text x="552.5" y="607" text-anchor="middle" font-family="Arial" font-size="18" font-weight="600" fill="#172B4D">Transformer Encoder</text>
+</g>
+<g id="graphenc" filter="url(#shadow)"><rect x="410" y="685" width="285" height="150" rx="16" fill="#E2F0E0" stroke="#426986" stroke-width="2.5"/>
+<line x1="489.8" y1="713" x2="552.5" y2="708.0" stroke="#9AB0BF" stroke-width="1.5"/>
+<line x1="489.8" y1="713" x2="552.5" y2="727.0" stroke="#9AB0BF" stroke-width="1.5"/>
+<line x1="489.8" y1="713" x2="552.5" y2="744.0" stroke="#9AB0BF" stroke-width="1.5"/>
+<line x1="489.8" y1="735.5" x2="552.5" y2="708.0" stroke="#9AB0BF" stroke-width="1.5"/>
+<line x1="489.8" y1="735.5" x2="552.5" y2="727.0" stroke="#9AB0BF" stroke-width="1.5"/>
+<line x1="489.8" y1="735.5" x2="552.5" y2="744.0" stroke="#9AB0BF" stroke-width="1.5"/>
+<line x1="552.5" y1="708.0" x2="615.2" y2="718.0" stroke="#9AB0BF" stroke-width="1.5"/>
+<line x1="552.5" y1="708.0" x2="615.2" y2="738.0" stroke="#9AB0BF" stroke-width="1.5"/>
+<line x1="552.5" y1="727.0" x2="615.2" y2="718.0" stroke="#9AB0BF" stroke-width="1.5"/>
+<line x1="552.5" y1="727.0" x2="615.2" y2="738.0" stroke="#9AB0BF" stroke-width="1.5"/>
+<line x1="552.5" y1="744.0" x2="615.2" y2="718.0" stroke="#9AB0BF" stroke-width="1.5"/>
+<line x1="552.5" y1="744.0" x2="615.2" y2="738.0" stroke="#9AB0BF" stroke-width="1.5"/>
+<circle cx="489.8" cy="713" r="8" fill="#8FC2DC" stroke="#3D6078" stroke-width="2"/>
+<circle cx="489.8" cy="735.5" r="8" fill="#8FC2DC" stroke="#3D6078" stroke-width="2"/>
+<circle cx="552.5" cy="708.0" r="8" fill="#8FC2DC" stroke="#3D6078" stroke-width="2"/>
+<circle cx="552.5" cy="727.0" r="8" fill="#8FC2DC" stroke="#3D6078" stroke-width="2"/>
+<circle cx="552.5" cy="744.0" r="8" fill="#8FC2DC" stroke="#3D6078" stroke-width="2"/>
+<circle cx="615.2" cy="718.0" r="8" fill="#8FC2DC" stroke="#3D6078" stroke-width="2"/>
+<circle cx="615.2" cy="738.0" r="8" fill="#8FC2DC" stroke="#3D6078" stroke-width="2"/>
+<text x="552.5" y="817" text-anchor="middle" font-family="Arial" font-size="18" font-weight="600" fill="#172B4D">Graph Encoder</text>
+</g>
+<g id="align" filter="url(#shadow)"><rect x="835" y="145" width="250" height="235" rx="16" fill="#F7DFD3" stroke="#426986" stroke-width="2.5"/>
+<rect x="845" y="181" width="205" height="137" rx="9" fill="#E8EEF4" stroke="#3D6078" stroke-width="1.5" opacity="0.9299999999999999"/>
+<rect x="850" y="175" width="205" height="137" rx="9" fill="#E8EEF4" stroke="#3D6078" stroke-width="1.5" opacity="0.77"/>
+<rect x="855" y="169" width="205" height="137" rx="9" fill="#E8EEF4" stroke="#3D6078" stroke-width="1.5" opacity="0.61"/>
+<rect x="877" y="185.0" width="166" height="38.333333333333336" rx="5" fill="#F3A37E" stroke="#3D6078" stroke-width="1.5"/>
+<text x="960.0" y="209.16666666666666" text-anchor="middle" font-family="Arial" font-size="14" fill="#19324A">Cross-Attention</text>
+<rect x="877" y="229.33333333333334" width="166" height="38.333333333333336" rx="5" fill="#9BCF9B" stroke="#3D6078" stroke-width="1.5"/>
+<text x="960.0" y="253.5" text-anchor="middle" font-family="Arial" font-size="14" fill="#19324A">Add &amp; Norm</text>
+<rect x="877" y="273.6666666666667" width="166" height="38.333333333333336" rx="5" fill="#AFC7DC" stroke="#3D6078" stroke-width="1.5"/>
+<text x="960.0" y="297.83333333333337" text-anchor="middle" font-family="Arial" font-size="14" fill="#19324A">FFN</text>
+<text x="960.0" y="362" text-anchor="middle" font-family="Arial" font-size="18" font-weight="600" fill="#172B4D">Cross-modal Attention</text>
+</g>
+<g id="relation" filter="url(#shadow)"><rect x="1140" y="145" width="245" height="235" rx="16" fill="#E6F1E3" stroke="#426986" stroke-width="2.5"/>
+<line x1="1193.9" y1="219.8" x2="1262.5" y2="196.7" stroke="#3D6078" stroke-width="2"/>
+<line x1="1262.5" y1="196.7" x2="1331.1" y2="224.75" stroke="#3D6078" stroke-width="2"/>
+<line x1="1193.9" y1="219.8" x2="1218.4" y2="279.2" stroke="#3D6078" stroke-width="2"/>
+<line x1="1262.5" y1="196.7" x2="1291.9" y2="285.8" stroke="#3D6078" stroke-width="2"/>
+<line x1="1331.1" y1="224.75" x2="1340.9" y2="269.3" stroke="#3D6078" stroke-width="2"/>
+<line x1="1218.4" y1="279.2" x2="1291.9" y2="285.8" stroke="#3D6078" stroke-width="2"/>
+<line x1="1291.9" y1="285.8" x2="1340.9" y2="269.3" stroke="#3D6078" stroke-width="2"/>
+<line x1="1331.1" y1="224.75" x2="1291.9" y2="285.8" stroke="#3D6078" stroke-width="2"/>
+<circle cx="1193.9" cy="219.8" r="10" fill="#9DC7E0" stroke="#3D6078" stroke-width="2"/>
+<circle cx="1262.5" cy="196.7" r="10" fill="#F0BC8C" stroke="#3D6078" stroke-width="2"/>
+<circle cx="1331.1" cy="224.75" r="10" fill="#A9D3A5" stroke="#3D6078" stroke-width="2"/>
+<circle cx="1218.4" cy="279.2" r="10" fill="#C2AEDC" stroke="#3D6078" stroke-width="2"/>
+<circle cx="1291.9" cy="285.8" r="10" fill="#F2A7A7" stroke="#3D6078" stroke-width="2"/>
+<circle cx="1340.9" cy="269.3" r="10" fill="#9DC7E0" stroke="#3D6078" stroke-width="2"/>
+<text x="1262.5" y="362" text-anchor="middle" font-family="Arial" font-size="18" font-weight="600" fill="#172B4D">Learned Relation Graph</text>
+</g>
+<g id="fusion" filter="url(#shadow)"><rect x="930" y="465" width="320" height="285" rx="16" fill="#E9DFF2" stroke="#7E5AA6" stroke-width="2.5"/>
+<rect x="940" y="501" width="275" height="187" rx="9" fill="#E8EEF4" stroke="#3D6078" stroke-width="1.5" opacity="0.9299999999999999"/>
+<rect x="945" y="495" width="275" height="187" rx="9" fill="#E8EEF4" stroke="#3D6078" stroke-width="1.5" opacity="0.77"/>
+<rect x="950" y="489" width="275" height="187" rx="9" fill="#E8EEF4" stroke="#3D6078" stroke-width="1.5" opacity="0.61"/>
+<rect x="972" y="505.0" width="236" height="55.0" rx="5" fill="#AFC7DC" stroke="#3D6078" stroke-width="1.5"/>
+<text x="1090.0" y="537.5" text-anchor="middle" font-family="Arial" font-size="14" fill="#19324A">Projection</text>
+<rect x="972" y="566.0" width="236" height="55.0" rx="5" fill="#F3B978" stroke="#3D6078" stroke-width="1.5"/>
+<text x="1090.0" y="598.5" text-anchor="middle" font-family="Arial" font-size="14" fill="#19324A">Gated Fusion</text>
+<rect x="972" y="627.0" width="236" height="55.0" rx="5" fill="#9BCF9B" stroke="#3D6078" stroke-width="1.5"/>
+<text x="1090.0" y="659.5" text-anchor="middle" font-family="Arial" font-size="14" fill="#19324A">Normalization</text>
+<text x="1090.0" y="732" text-anchor="middle" font-family="Arial" font-size="18" font-weight="600" fill="#172B4D">Adaptive Fusion Block</text>
+</g>
+<g id="joint" filter="url(#shadow)"><rect x="1045" y="795" width="210" height="100" rx="16" fill="#D9E8F4" stroke="#426986" stroke-width="2.5"/>
+<rect x="1077" y="833" width="120" height="42" rx="5" fill="#D8EEF5" stroke="#3D6078" stroke-width="2"/>
+<rect x="1090" y="823" width="120" height="42" rx="5" fill="#C5E3F0" stroke="#3D6078" stroke-width="2"/>
+<rect x="1103" y="813" width="120" height="42" rx="5" fill="#A9D5E8" stroke="#3D6078" stroke-width="2"/>
+<line x1="1126.75" y1="833" x2="1126.75" y2="849" stroke="#FFFFFF" stroke-width="1.5" opacity=".9"/>
+<line x1="1150.5" y1="833" x2="1150.5" y2="849" stroke="#FFFFFF" stroke-width="1.5" opacity=".9"/>
+<line x1="1174.25" y1="833" x2="1174.25" y2="849" stroke="#FFFFFF" stroke-width="1.5" opacity=".9"/>
+<text x="1150.0" y="877" text-anchor="middle" font-family="Arial" font-size="18" font-weight="600" fill="#172B4D">Joint Representation</text>
+</g>
+<g id="prediction" filter="url(#shadow)"><rect x="1510" y="190" width="215" height="175" rx="16" fill="#E1F1DF" stroke="#426986" stroke-width="2.5"/>
+<path d="M 1548 218 V 318 H 1687" fill="none" stroke="#3D6078" stroke-width="2"/>
+<rect x="1566.0" y="284.25" width="19.857142857142858" height="33.75" rx="3" fill="#AFC7DC"/>
+<rect x="1594.7928571428572" y="264.0" width="19.857142857142858" height="54.0" rx="3" fill="#B8B8C4"/>
+<rect x="1623.5857142857144" y="274.5" width="19.857142857142858" height="43.5" rx="3" fill="#B8B8C4"/>
+<rect x="1652.3785714285714" y="252.0" width="19.857142857142858" height="66.0" rx="3" fill="#4B98C8"/>
+<text x="1617.5" y="347" text-anchor="middle" font-family="Arial" font-size="18" font-weight="600" fill="#172B4D">Task Prediction</text>
+</g>
+<g id="explain" filter="url(#shadow)"><rect x="1510" y="430" width="215" height="190" rx="16" fill="#F5ECD8" stroke="#426986" stroke-width="2.5"/>
+<line x1="1557.3" y1="490.4" x2="1617.5" y2="473.6" stroke="#3D6078" stroke-width="2"/>
+<line x1="1617.5" y1="473.6" x2="1677.7" y2="494.0" stroke="#3D6078" stroke-width="2"/>
+<line x1="1557.3" y1="490.4" x2="1578.8" y2="533.6" stroke="#3D6078" stroke-width="2"/>
+<line x1="1617.5" y1="473.6" x2="1643.3" y2="538.4" stroke="#3D6078" stroke-width="2"/>
+<line x1="1677.7" y1="494.0" x2="1686.3" y2="526.4" stroke="#3D6078" stroke-width="2"/>
+<line x1="1578.8" y1="533.6" x2="1643.3" y2="538.4" stroke="#3D6078" stroke-width="2"/>
+<line x1="1643.3" y1="538.4" x2="1686.3" y2="526.4" stroke="#3D6078" stroke-width="2"/>
+<line x1="1677.7" y1="494.0" x2="1643.3" y2="538.4" stroke="#3D6078" stroke-width="2"/>
+<circle cx="1557.3" cy="490.4" r="10" fill="#9DC7E0" stroke="#3D6078" stroke-width="2"/>
+<circle cx="1617.5" cy="473.6" r="10" fill="#F0BC8C" stroke="#3D6078" stroke-width="2"/>
+<circle cx="1677.7" cy="494.0" r="10" fill="#A9D3A5" stroke="#3D6078" stroke-width="2"/>
+<circle cx="1578.8" cy="533.6" r="10" fill="#C2AEDC" stroke="#3D6078" stroke-width="2"/>
+<circle cx="1643.3" cy="538.4" r="10" fill="#F2A7A7" stroke="#3D6078" stroke-width="2"/>
+<circle cx="1686.3" cy="526.4" r="10" fill="#9DC7E0" stroke="#3D6078" stroke-width="2"/>
+<text x="1617.5" y="602" text-anchor="middle" font-family="Arial" font-size="18" font-weight="600" fill="#172B4D">Graph Explanation</text>
+</g>
+<g id="taskloss" filter="url(#shadow)"><rect x="1518" y="700" width="195" height="70" rx="36" fill="#F8DFDC" stroke="#C96E66" stroke-width="2.5"/>
+<text x="1615.5" y="742.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="600" fill="#172B4D">Task Loss</text>
+</g>
+<g id="alignloss" filter="url(#shadow)"><rect x="1518" y="805" width="195" height="70" rx="36" fill="#E9E0F4" stroke="#8062A8" stroke-width="2.5"/>
+<text x="1615.5" y="847.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="600" fill="#172B4D">Alignment Loss</text>
+</g>
+<g id="a1"><rect x="905" y="438" width="370" height="335" rx="12" fill="none" stroke="#A25B8B" stroke-width="3" stroke-dasharray="9 7"/><text x="917" y="428" font-family="Arial" font-size="17" font-weight="700" fill="#A25B8B">Innovation zoom-in</text></g>
+</svg>
