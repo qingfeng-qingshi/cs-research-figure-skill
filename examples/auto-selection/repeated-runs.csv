@@ -1,0 +1,33 @@
+variant,metric,value,seed
+Baseline CNN,Accuracy (%),82.4,1
+Baseline CNN,Accuracy (%),82.9,2
+Baseline CNN,Accuracy (%),81.8,3
+Baseline CNN,Accuracy (%),82.6,4
+Baseline CNN,Accuracy (%),83.0,5
+Baseline CNN,Accuracy (%),82.2,6
+Baseline CNN,Accuracy (%),82.7,7
+Baseline CNN,Accuracy (%),81.9,8
+Transformer,Accuracy (%),84.1,1
+Transformer,Accuracy (%),84.6,2
+Transformer,Accuracy (%),83.8,3
+Transformer,Accuracy (%),84.4,4
+Transformer,Accuracy (%),84.9,5
+Transformer,Accuracy (%),84.0,6
+Transformer,Accuracy (%),84.5,7
+Transformer,Accuracy (%),84.2,8
+Graph Model,Accuracy (%),85.0,1
+Graph Model,Accuracy (%),85.4,2
+Graph Model,Accuracy (%),84.7,3
+Graph Model,Accuracy (%),85.2,4
+Graph Model,Accuracy (%),85.6,5
+Graph Model,Accuracy (%),84.9,6
+Graph Model,Accuracy (%),85.3,7
+Graph Model,Accuracy (%),84.8,8
+Proposed Method,Accuracy (%),87.3,1
+Proposed Method,Accuracy (%),87.7,2
+Proposed Method,Accuracy (%),86.9,3
+Proposed Method,Accuracy (%),87.5,4
+Proposed Method,Accuracy (%),87.9,5
+Proposed Method,Accuracy (%),87.2,6
+Proposed Method,Accuracy (%),87.6,7
+Proposed Method,Accuracy (%),87.1,8

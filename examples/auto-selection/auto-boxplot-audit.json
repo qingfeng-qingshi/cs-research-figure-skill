@@ -1,0 +1,17 @@
+[
+  {
+    "path": "examples\\auto-selection\\auto-boxplot.svg",
+    "verdict": "PASS",
+    "issues": []
+  },
+  {
+    "path": "examples\\auto-selection\\auto-boxplot.pdf",
+    "verdict": "PASS",
+    "issues": []
+  },
+  {
+    "path": "examples\\auto-selection\\auto-boxplot.png",
+    "verdict": "PASS",
+    "issues": []
+  }
+]

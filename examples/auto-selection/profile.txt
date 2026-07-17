@@ -1,0 +1,16 @@
+Experiment data profile
+=======================
+Rows: 32
+Recommended chart: boxplot
+Reason: repeated raw observations are available (median n=8 per group)
+Error columns: none
+Sample-size columns: none
+Observed group sizes: min=8, median=8.0, max=8 (4 groups)
+IQR outliers in value: 0
+IQR outliers in seed: 0
+
+Columns:
+- variant: categorical, role=grouping, n=32, missing=0
+- metric: categorical, role=grouping, n=32, missing=0
+- value: numeric-continuous, role=data, n=32, missing=0
+- seed: numeric-discrete, role=data, n=32, missing=0

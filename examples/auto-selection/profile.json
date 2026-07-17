@@ -1,0 +1,63 @@
+{
+  "rows": 32,
+  "columns": [
+    {
+      "name": "variant",
+      "type": "categorical",
+      "role": "grouping",
+      "non_null": 32,
+      "missing": 0,
+      "unique": 4
+    },
+    {
+      "name": "metric",
+      "type": "categorical",
+      "role": "grouping",
+      "non_null": 32,
+      "missing": 0,
+      "unique": 1
+    },
+    {
+      "name": "value",
+      "type": "numeric-continuous",
+      "role": "data",
+      "non_null": 32,
+      "missing": 0,
+      "unique": 31
+    },
+    {
+      "name": "seed",
+      "type": "numeric-discrete",
+      "role": "data",
+      "non_null": 32,
+      "missing": 0,
+      "unique": 8
+    }
+  ],
+  "error_columns": [],
+  "sample_size_columns": [],
+  "sample_sizes": {
+    "grouped_by": [
+      "variant",
+      "metric"
+    ],
+    "min": 8,
+    "median": 8.0,
+    "max": 8,
+    "groups": 4
+  },
+  "outliers_iqr": {
+    "value": {
+      "count": 0,
+      "values": []
+    },
+    "seed": {
+      "count": 0,
+      "values": []
+    }
+  },
+  "recommendation": {
+    "kind": "boxplot",
+    "reason": "repeated raw observations are available (median n=8 per group)"
+  }
+}
