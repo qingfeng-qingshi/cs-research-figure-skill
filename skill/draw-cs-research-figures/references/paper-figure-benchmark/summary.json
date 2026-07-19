@@ -1,0 +1,31 @@
+{
+  "selection_stage": "candidate_overview",
+  "papers": 40,
+  "planned_figures": 100,
+  "venue_counts": {
+    "CVPR": 10,
+    "NeurIPS": 10,
+    "ICML": 10,
+    "ACL": 10
+  },
+  "year_counts": {
+    "2025": 26,
+    "2026": 14
+  },
+  "role_counts": {
+    "overview_pipeline": 8,
+    "method_architecture": 18,
+    "qualitative_grid": 12,
+    "comparison_plot": 5,
+    "module_zoom": 7,
+    "ablation_plot": 11,
+    "tensor_flow": 6,
+    "agent_graph": 11,
+    "feedback_loop": 9,
+    "retrieval_graph": 7,
+    "heatmap": 3,
+    "attention_map": 1,
+    "system_diagram": 2
+  },
+  "pending_visual_audit": 100
+}

@@ -1,6 +1,6 @@
 # CS Research Figure Skill
 
-[中文](README.md) | [English](README_EN.md) | 当前版本：`v0.3.1`
+[中文](README.md) | [English](README_EN.md) | 当前版本：`v0.5.1`
 
 面向计算机科学与人工智能论文的可编辑科研绘图 Skill。它可以从方法描述、参考图和实验 CSV 中生成方法框架图、模块说明图、对比实验图和消融实验图，并自动完成数据分析、图型选择、投稿预设和质量检查。
 
@@ -13,6 +13,8 @@
 - 提供 CVPR、NeurIPS、ICML、ACL、IEEE 和中文论文预设。
 - 输出可编辑 SVG、PDF、PNG、源数据、场景 JSON 和机器审计报告。
 - 检查文字裁切、标签重叠、中文乱码、灰度可辨识性、DPI 和 PDF 字体嵌入。
+- 将参考图分区重建为原生可编辑 SVG 文字、形状、连接线和可替换局部素材。
+- 使用统一 `template_manifest.json` 替换 PPTX、SVG 和 Draw.io 中的文字与局部图片。
 
 ## 生成效果
 
@@ -40,6 +42,38 @@
 
 输入包含 4 种方法、每组 8 次重复实验。Skill 自动识别重复样本，选择“箱线图 + 原始点”，应用 CVPR 双栏预设，并完成三种格式的质量审计。对应文件：[SVG](examples/auto-selection/auto-boxplot.svg) · [PDF](examples/auto-selection/auto-boxplot.pdf) · [CSV](examples/auto-selection/repeated-runs.csv) · [数据分析](examples/auto-selection/profile.json) · [审计报告](examples/auto-selection/auto-boxplot-audit.json)
 
+### 5. 统一可编辑模板替换
+
+![PPTX 模板替换 Demo](examples/templates/demo-replaced-preview.png)
+
+同一份[模板清单](examples/templates/template_manifest.json)和替换数据，可以同时生成[可编辑 SVG](examples/templates/demo-replaced.svg)、[Draw.io XML](examples/templates/demo-replaced.drawio)和[可编辑 PPTX](examples/templates/demo-replaced.pptx)。这个复杂 Demo 包含三路多模态输入、视觉/语言/图编码器、跨模态注意力、关系图、自适应融合局部放大、预测与三类训练目标；一次测试 8 个文字槽位和 3 个局部矢量素材替换，没有把整张图扁平化为 PNG。
+### 6. 大模型、多智能体、视觉与软件系统模块库
+
+![热门计算机与人工智能科研模块库](examples/module-library/hot-topic-module-library.png)
+
+模块库目前包含 35 个机器可读模块，覆盖大模型与 RAG、多智能体协作、计算机视觉基础模型和 AI 软件系统。每个模块都提供中英文关键词、别名、推荐视觉原语、必须表达的科学语义和独立可编辑 SVG 素材。 35 个模块均具有不同的几何结构指纹；功能相近的模块可以共享配色和形状语言，但不会复用完整图示。对应文件：[模块目录 JSON](skill/draw-cs-research-figures/assets/module-catalog.json) · [可编辑模块总览 SVG](examples/module-library/hot-topic-module-library.svg) · [独立 SVG 素材目录](skill/draw-cs-research-figures/assets/module-icons)
+
+### 7. 参考图结构仿绘与新内容重构
+
+下面左侧是合成的高质量参考结构，用于提取分区比例、阅读顺序、形状语言、连接层级和配色角色；右侧使用新的研究内容重新组织，并保留 Scene JSON、稳定元素 ID 和可编辑 SVG。示例不复制具体论文内容。
+
+#### 多智能体 RAG
+
+![多智能体 RAG 参考结构与可编辑重绘对比](examples/imitation/multi-agent-rag/comparison.png)
+
+文件：[参考结构 SVG](examples/imitation/multi-agent-rag/reference-structure.svg) · [目标可编辑 SVG](examples/imitation/multi-agent-rag/target-redraw.svg) · [目标 Scene JSON](examples/imitation/multi-agent-rag/target-redraw-spec.json)
+
+#### 视觉基础模型
+
+![视觉基础模型参考结构与可编辑重绘对比](examples/imitation/vision-foundation-model/comparison.png)
+
+文件：[参考结构 SVG](examples/imitation/vision-foundation-model/reference-structure.svg) · [目标可编辑 SVG](examples/imitation/vision-foundation-model/target-redraw.svg) · [目标 Scene JSON](examples/imitation/vision-foundation-model/target-redraw-spec.json)
+
+#### 大模型推理与软件系统
+
+![大模型推理系统参考结构与可编辑重绘对比](examples/imitation/llm-serving-system/comparison.png)
+
+文件：[参考结构 SVG](examples/imitation/llm-serving-system/reference-structure.svg) · [目标可编辑 SVG](examples/imitation/llm-serving-system/target-redraw.svg) · [目标 Scene JSON](examples/imitation/llm-serving-system/target-redraw-spec.json)
 ## 安装
 
 ### 在 Codex 中安装
@@ -53,12 +87,15 @@ https://github.com/qingfeng-qingshi/cs-research-figure-skill/tree/main/skill/dra
 
 安装成功后，在新一轮任务中调用 `$draw-cs-research-figures`。
 
+如果需要 PPTX 模板替换，进入安装后的 `draw-cs-research-figures` 目录执行一次 `npm install`。
+
 ### 手动安装
 
 ```bash
 git clone https://github.com/qingfeng-qingshi/cs-research-figure-skill.git
 cd cs-research-figure-skill
 python -m pip install -r requirements.txt
+npm install  # 可选：PPTX 模板替换需要
 ```
 
 Windows PowerShell：
@@ -131,9 +168,13 @@ method-audit.json          自动检查结果
 ### 用法四：根据参考图重绘自己的内容
 
 ```text
-使用 $draw-cs-research-figures，参考 reference.png 的信息密度、分区方式和视觉层级，
-使用我在 method.md 中的真实算法内容重新绘制，不复制参考图中的论文专有文字、数据或图标。
-保留张量层叠、局部放大和图节点等适合我方法的视觉元素，输出可编辑 SVG。
+使用 $draw-cs-research-figures，读取 reference.png 和 method.md。
+先提取参考图可迁移的分区比例、阅读顺序、形状语言、连接层级、信息密度和配色角色；
+不要复制论文专有文字、数据、图标或原始拓扑。
+搜索 module-catalog.json，为我的大模型、多智能体、视觉或软件模块选择有科学语义的 SVG 元素，
+再根据 method.md 重建节点和连接关系。
+输出 reference-structure-spec.json、target-redraw-spec.json、可编辑 target-redraw.svg 和并排 comparison.png，
+并检查文字裁切、连线穿过标签、元素重叠和灰度可辨识性。
 ```
 
 ### 用法五：检查已有科研图
@@ -144,6 +185,19 @@ method-audit.json          自动检查结果
 先不要重绘；按 FAIL、WARN、PASS 给出检查结果和修改建议。
 ```
 
+### 用法六：从参考图分区重建可编辑科研图
+
+```text
+使用 $draw-cs-research-figures，通过 SAM3、VLM 和 OCR 分析 reference.png。
+把面板、文字、形状、连接线和局部图标整理为区域 JSON；将文字和简单几何重建为原生 SVG，并保留稳定 ID，同时生成 template_manifest.json。只借鉴参考图的通用视觉语法，并根据 method.md 核对所有推断连接。
+```
+
+### 用法七：自动修改 PPTX、SVG 或 Draw.io 模板
+
+```text
+使用 $draw-cs-research-figures，读取 template_manifest.json 和 replacement_values.json。
+替换标题、模块文字和局部插图，保持模板原有布局、字体、配色和元素 ID；输出所有可用的可编辑格式，并执行原有质量检查。
+```
 ## 命令行使用
 
 ### 1. 分析 CSV
@@ -191,6 +245,29 @@ python skill/draw-cs-research-figures/scripts/audit_figure.py \
 - `WARN`：估算重叠、灰度接近或字体回退，需要查看 PNG 预览。
 - `PASS`：确定性检查未发现问题，仍建议人工确认科学语义。
 
+### 5. 使用统一清单替换模板
+
+```bash
+npm install
+python skill/draw-cs-research-figures/scripts/apply_template.py \
+  --manifest examples/templates/template_manifest.json \
+  --values examples/templates/replacement_values.json \
+  --format pptx --output output/method.pptx
+```
+
+将 `--format` 改为 `svg` 或 `drawio` 可以生成其他可编辑主文件。先将 SAM3/VLM/OCR 检测结果规范化并裁剪局部元素，再重建参考图：
+
+```bash
+python skill/draw-cs-research-figures/scripts/prepare_reference_segments.py reference.png detections.json --out-dir output/segments
+```
+
+
+```bash
+python skill/draw-cs-research-figures/scripts/reconstruct_reference.py \
+  output/segments/segments.json --svg-out output/reconstructed.svg \
+  --manifest-out output/template_manifest.json
+```
+
 ## 实验 CSV 格式
 
 基线对比：
@@ -225,4 +302,14 @@ python -m unittest discover -s tests -v
 python scripts/package_skill.py
 ```
 
-当前版本：`v0.3.1`。代码采用 MIT License；投稿前请核对目标会议当年的官方模板。
+当前版本：`v0.5.1`。代码采用 MIT License；投稿前请核对目标会议当年的官方模板。
+
+## 2025–2026 顶会科研绘图候选基准库
+
+![40篇论文与100个目标Figure候选总览](examples/paper-figure-benchmark/candidate-overview.png)
+
+第一版包含 CVPR、NeurIPS、ICML、ACL 各 10 篇论文，共 100 个计划审查的 Figure 槽位。它按方法架构、智能体图、RAG/知识图、反馈环、张量流、局部放大、定性结果、对比实验和消融实验等视觉角色分类。
+
+当前状态为“候选总览”：正式用于重绘前，仍需逐篇核实 PDF 页码、Figure 编号、caption 和视觉质量分数。NeurIPS 2026 尚未公布录用结果，因此第一版只使用 NeurIPS 2025；ICML 2026 的 4 篇记录会在最终 PMLR 论文集发布后刷新。
+
+文件：[可编辑总览 SVG](examples/paper-figure-benchmark/candidate-overview.svg) · [论文清单 JSON](skill/draw-cs-research-figures/references/paper-figure-benchmark/papers.json) · [100个 Figure 槽位](skill/draw-cs-research-figures/references/paper-figure-benchmark/figures.jsonl) · [统计摘要](skill/draw-cs-research-figures/references/paper-figure-benchmark/summary.json)

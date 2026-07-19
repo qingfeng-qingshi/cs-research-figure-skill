@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker><filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#263C50" flood-opacity=".12"/></filter></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text id="figure-title" x="800.0" y="58" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#233B53">Centralized Tool-Augmented Agent</text>
+<g id="p1"><rect x="35" y="95" width="410" height="745" rx="25" fill="#F4F7FA" stroke="#CAD5DE" stroke-width="2"/><text x="57" y="133" font-family="Arial" font-size="21" font-weight="700" fill="#233B53">Inputs &amp; Context</text></g>
+<g id="p2"><rect x="465" y="95" width="690" height="745" rx="25" fill="#F7F3FA" stroke="#CAD5DE" stroke-width="2"/><text x="487" y="133" font-family="Arial" font-size="21" font-weight="700" fill="#233B53">Core Reasoning</text></g>
+<g id="p3"><rect x="1175" y="95" width="390" height="745" rx="25" fill="#F3F8F2" stroke="#CAD5DE" stroke-width="2"/><text x="1197" y="133" font-family="Arial" font-size="21" font-weight="700" fill="#233B53">Actions &amp; Objectives</text></g>
+<g id="r1"><path d="M 380.0 260.0 L 555.0 247.5" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="r2"><path d="M 805.0 247.5 L 850.0 247.5" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="r3"><path d="M 680.0 340.0 L 680.0 465.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="r4"><path d="M 975.0 340.0 L 975.0 465.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="r5"><path d="M 850.0 557.5 L 805.0 557.5" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="r6"><path d="M 805.0 557.5 L 1225.0 337.5" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="r7"><path d="M 805.0 557.5 L 1225.0 607.5" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="r8"><path d="M 1225.0 607.5 L 805.0 557.5" fill="none" stroke="#D48345" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#arrow)"/>
+<text x="1015.0" y="570.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="7">result</text>
+</g>
+<g id="query" filter="url(#shadow)"><rect x="90" y="180" width="290" height="160" rx="18" fill="#EAF2F8" stroke="#4C86B6" stroke-width="2.5"/>
+<rect x="174.3" y="216.0" width="44.0" height="52.0" rx="5.9" fill="#FFFFFF" stroke="#233B53" stroke-width="2"/><rect x="252.6" y="216.0" width="43.1" height="52.0" rx="5.9" fill="#E8F1E5" stroke="#5B9561" stroke-width="2"/><line x1="220.3" y1="241.6" x2="249.7" y2="241.6" stroke="#4C86B6" stroke-width="3"/><line x1="183.1" y1="228.8" x2="208.6" y2="228.8" stroke="#9CAEBB" stroke-width="2"/><line x1="183.1" y1="238.4" x2="208.6" y2="238.4" stroke="#9CAEBB" stroke-width="2"/><line x1="183.1" y1="248.0" x2="208.6" y2="248.0" stroke="#9CAEBB" stroke-width="2"/>
+<text x="235.0" y="309" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">User Query</text>
+</g>
+<g id="planner" filter="url(#shadow)"><rect x="555" y="155" width="250" height="185" rx="18" fill="#F1ECF7" stroke="#8062A8" stroke-width="2.5"/>
+<circle cx="680.0" cy="206.5" r="13.5" fill="#E8E1F1" stroke="#8062A8" stroke-width="2"/><rect x="659.8" y="223.1" width="40.5" height="32.4" rx="10.1" fill="#EFE9F5" stroke="#8062A8" stroke-width="2"/><circle cx="633.6" cy="260.1" r="5.1" fill="#F5C686" stroke="#D48345" stroke-width="2"/><circle cx="680.0" cy="260.1" r="5.1" fill="#F5C686" stroke="#D48345" stroke-width="2"/><circle cx="726.4" cy="260.1" r="5.1" fill="#F5C686" stroke="#D48345" stroke-width="2"/><line x1="680.0" y1="244.4" x2="633.6" y2="254.6" stroke="#8062A8" stroke-width="2"/><line x1="680.0" y1="244.4" x2="680.0" y2="254.6" stroke="#8062A8" stroke-width="2"/><line x1="680.0" y1="244.4" x2="726.4" y2="254.6" stroke="#8062A8" stroke-width="2"/>
+<text x="680.0" y="309" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Central Planner</text>
+</g>
+<g id="retrieval" filter="url(#shadow)"><rect x="850" y="155" width="250" height="185" rx="18" fill="#EAF2F8" stroke="#4C86B6" stroke-width="2.5"/>
+<rect x="922.7" y="193.5" width="38.0" height="60.1" rx="5.1" fill="#FFFFFF" stroke="#233B53" stroke-width="2"/><rect x="990.2" y="193.5" width="37.1" height="60.1" rx="5.1" fill="#E8F1E5" stroke="#5B9561" stroke-width="2"/><line x1="962.3" y1="223.1" x2="987.7" y2="223.1" stroke="#4C86B6" stroke-width="3"/><line x1="930.3" y1="208.3" x2="952.2" y2="208.3" stroke="#9CAEBB" stroke-width="2"/><line x1="930.3" y1="219.4" x2="952.2" y2="219.4" stroke="#9CAEBB" stroke-width="2"/><line x1="930.3" y1="230.5" x2="952.2" y2="230.5" stroke="#9CAEBB" stroke-width="2"/><circle cx="975.0" cy="223.1" r="7.6" fill="#F5C686" stroke="#D48345" stroke-width="2"/><line x1="969.9" y1="229.6" x2="963.2" y2="238.8" stroke="#D48345" stroke-width="3"/>
+<text x="975.0" y="309" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Document Retrieval</text>
+</g>
+<g id="worker" filter="url(#shadow)"><rect x="555" y="465" width="250" height="185" rx="18" fill="#F1ECF7" stroke="#8062A8" stroke-width="2.5"/>
+<circle cx="680.0" cy="516.5" r="13.5" fill="#E8E1F1" stroke="#8062A8" stroke-width="2"/><rect x="659.8" y="533.1" width="40.5" height="32.4" rx="10.1" fill="#EFE9F5" stroke="#8062A8" stroke-width="2"/>
+<text x="680.0" y="619" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Single Worker Agent</text>
+</g>
+<g id="memory" filter="url(#shadow)"><rect x="850" y="465" width="250" height="185" rx="18" fill="#F1ECF7" stroke="#8062A8" stroke-width="2.5"/>
+<rect x="931.1" y="503.5" width="69.2" height="50.9" rx="5.9" fill="#F1EAF6" stroke="#8062A8" stroke-width="2"/><rect x="939.6" y="511.8" width="69.2" height="50.9" rx="5.9" fill="#E5DAEF" stroke="#8062A8" stroke-width="2"/><rect x="948.0" y="520.1" width="69.2" height="50.9" rx="5.9" fill="#D6C6E5" stroke="#8062A8" stroke-width="2"/><line x1="961.5" y1="529.4" x2="1007.1" y2="529.4" stroke="#FFFFFF" stroke-width="3"/><line x1="961.5" y1="541.4" x2="1007.1" y2="541.4" stroke="#FFFFFF" stroke-width="3"/><line x1="961.5" y1="553.5" x2="1007.1" y2="553.5" stroke="#FFFFFF" stroke-width="3"/>
+<text x="975.0" y="619" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Shared Memory</text>
+</g>
+<g id="answer" filter="url(#shadow)"><rect x="1225" y="250" width="285" height="175" rx="18" fill="#F1ECF7" stroke="#8062A8" stroke-width="2.5"/>
+<circle cx="1331.9" cy="313.8" r="15.8" fill="#D9EAF4" stroke="#4C86B6" stroke-width="2"/><circle cx="1402.1" cy="313.8" r="15.8" fill="#E8E1F1" stroke="#8062A8" stroke-width="2"/><line x1="1349.2" y1="313.8" x2="1384.8" y2="313.8" stroke="#C96863" stroke-width="3"/><line x1="1384.8" y1="326.9" x2="1349.2" y2="326.9" stroke="#5B9561" stroke-width="2" stroke-dasharray="6 4"/><path d="M 1394.4 312.9 l 6 7 l 13 -16" fill="none" stroke="#5B9561" stroke-width="4"/><path d="M 1367.5 283.1 L 1382.9 290.1 L 1380.0 306.8 L 1367.5 315.5 L 1355.0 306.8 L 1352.1 290.1 Z" fill="#E7F1E4" stroke="#5B9561" stroke-width="2"/>
+<text x="1367.5" y="394" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Final Answer</text>
+</g>
+<g id="tools" filter="url(#shadow)"><rect x="1225" y="520" width="285" height="175" rx="18" fill="#F9F0E4" stroke="#D48345" stroke-width="2.5"/>
+<rect x="1314.6" y="557.5" width="105.8" height="61.3" rx="9.6" fill="#F4E7D5" stroke="#D48345" stroke-width="2"/><line x1="1346.3" y1="579.4" x2="1362.7" y2="588.1" stroke="#233B53" stroke-width="3"/><line x1="1362.7" y1="588.1" x2="1346.3" y2="596.9" stroke="#233B53" stroke-width="3"/><line x1="1371.3" y1="597.8" x2="1395.4" y2="597.8" stroke="#4C86B6" stroke-width="3"/>
+<text x="1367.5" y="664" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">External Tools</text>
+</g>
+</svg>

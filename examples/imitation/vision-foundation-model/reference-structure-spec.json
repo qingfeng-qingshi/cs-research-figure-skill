@@ -1,0 +1,160 @@
+{
+  "id": "vision-reference",
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "background": "#FFFFFF"
+  },
+  "title": "Multi-Scale Visual Recognition Pipeline",
+  "panels": [
+    {
+      "id": "p1",
+      "label": "Inputs & Context",
+      "x": 35,
+      "y": 95,
+      "w": 410,
+      "h": 745,
+      "fill": "#F4F7FA"
+    },
+    {
+      "id": "p2",
+      "label": "Core Reasoning",
+      "x": 465,
+      "y": 95,
+      "w": 690,
+      "h": 745,
+      "fill": "#F7F3FA"
+    },
+    {
+      "id": "p3",
+      "label": "Actions & Objectives",
+      "x": 1175,
+      "y": 95,
+      "w": 390,
+      "h": 745,
+      "fill": "#F3F8F2"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "image",
+      "label": "Input Image",
+      "subtitle": "",
+      "x": 90,
+      "y": 180,
+      "w": 290,
+      "h": 180,
+      "kind": "patches",
+      "family": "vision",
+      "fill": "#EAF4EA",
+      "stroke": "#5B9561"
+    },
+    {
+      "id": "backbone",
+      "label": "CNN Backbone",
+      "subtitle": "",
+      "x": 530,
+      "y": 160,
+      "w": 250,
+      "h": 185,
+      "kind": "vit",
+      "family": "vision",
+      "fill": "#EAF4EA",
+      "stroke": "#5B9561"
+    },
+    {
+      "id": "pyramid",
+      "label": "Feature Pyramid",
+      "subtitle": "",
+      "x": 840,
+      "y": 160,
+      "w": 250,
+      "h": 185,
+      "kind": "fpn",
+      "family": "vision",
+      "fill": "#EAF4EA",
+      "stroke": "#5B9561"
+    },
+    {
+      "id": "attention",
+      "label": "Spatial Attention",
+      "subtitle": "",
+      "x": 685,
+      "y": 470,
+      "w": 250,
+      "h": 180,
+      "kind": "alignment",
+      "family": "vision",
+      "fill": "#EAF4EA",
+      "stroke": "#5B9561"
+    },
+    {
+      "id": "detect",
+      "label": "Detection Head",
+      "subtitle": "",
+      "x": 1225,
+      "y": 180,
+      "w": 285,
+      "h": 170,
+      "kind": "detection",
+      "family": "vision",
+      "fill": "#EAF4EA",
+      "stroke": "#5B9561"
+    },
+    {
+      "id": "segment",
+      "label": "Segmentation Head",
+      "subtitle": "",
+      "x": 1225,
+      "y": 500,
+      "w": 285,
+      "h": 170,
+      "kind": "segmentation",
+      "family": "vision",
+      "fill": "#EAF4EA",
+      "stroke": "#5B9561"
+    }
+  ],
+  "edges": [
+    {
+      "id": "r1",
+      "source": "image",
+      "target": "backbone",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r2",
+      "source": "backbone",
+      "target": "pyramid",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r3",
+      "source": "pyramid",
+      "target": "attention",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r4",
+      "source": "attention",
+      "target": "detect",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r5",
+      "source": "attention",
+      "target": "segment",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    }
+  ]
+}

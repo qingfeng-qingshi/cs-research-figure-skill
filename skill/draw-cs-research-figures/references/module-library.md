@@ -1,6 +1,8 @@
-﻿# CS and AI module library
+# CS and AI module library
 
 Select only modules supported by the method description.
+
+For current LLM, multi-agent, computer-vision, and software-system vocabulary plus reusable SVG assets, read `hot-topic-modules.md` and search `../assets/module-catalog.json` with `scripts/search_module_catalog.py`.
 
 | Family | Visual primitive | Required semantics |
 |---|---|---|

@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "template_id": "complex-graph-guided-multimodal-demo",
+  "templates": {
+    "svg": "template.svg",
+    "drawio": "template.drawio",
+    "pptx": {
+      "path": "template.pptx",
+      "slides": [
+        1
+      ]
+    }
+  },
+  "slots": [
+    {
+      "id": "figure_title",
+      "kind": "text",
+      "required": true,
+      "selectors": {
+        "svg": {
+          "element_id": "figure-title"
+        },
+        "drawio": {
+          "cell_id": "figure-title"
+        },
+        "pptx": {
+          "slide": 1,
+          "shape": "FIGURE_TITLE"
+        }
+      }
+    },
+    {
+      "id": "visual_encoder",
+      "kind": "text",
+      "required": true,
+      "selectors": {
+        "svg": {
+          "element_id": "visual-label"
+        },
+        "drawio": {
+          "cell_id": "visual-encoder"
+        },
+        "pptx": {
+          "slide": 1,
+          "shape": "VISUAL_ENCODER"
+        }
+      }
+    },
+    {
+      "id": "language_encoder",
+      "kind": "text",
+      "required": true,
+      "selectors": {
+        "svg": {
+          "element_id": "language-label"
+        },
+        "drawio": {
+          "cell_id": "language-encoder"
+        },
+        "pptx": {
+          "slide": 1,
+          "shape": "LANGUAGE_ENCODER"
+        }
+      }
+    },
+    {
+      "id": "graph_encoder",
+      "kind": "text",
+      "required": true,
+      "selectors": {
+        "svg": {
+          "element_id": "graph-label"
+        },
+        "drawio": {
+          "cell_id": "graph-encoder"
+        },
+        "pptx": {
+          "slide": 1,
+          "shape": "GRAPH_ENCODER"
+        }
+      }
+    },
+    {
+      "id": "fusion_module",
+      "kind": "text",
+      "required": true,
+      "selectors": {
+        "svg": {
+          "element_id": "fusion-label"
+        },
+        "drawio": {
+          "cell_id": "fusion-module"
+        },
+        "pptx": {
+          "slide": 1,
+          "shape": "FUSION_MODULE"
+        }
+      }
+    },
+    {
+      "id": "prediction_head",
+      "kind": "text",
+      "required": true,
+      "selectors": {
+        "svg": {
+          "element_id": "prediction-label"
+        },
+        "drawio": {
+          "cell_id": "prediction"
+        },
+        "pptx": {
+          "slide": 1,
+          "shape": "PREDICTION_HEAD"
+        }
+      }
+    },
+    {
+      "id": "task_loss",
+      "kind": "text",
+      "required": true,
+      "selectors": {
+        "svg": {
+          "element_id": "task-loss-label"
+        },
+        "drawio": {
+          "cell_id": "task-loss"
+        },
+        "pptx": {
+          "slide": 1,
+          "shape": "TASK_LOSS"
+        }
+      }
+    },
+    {
+      "id": "alignment_loss",
+      "kind": "text",
+      "required": true,
+      "selectors": {
+        "svg": {
+          "element_id": "align-loss-label"
+        },
+        "drawio": {
+          "cell_id": "align-loss"
+        },
+        "pptx": {
+          "slide": 1,
+          "shape": "ALIGNMENT_LOSS"
+        }
+      }
+    },
+    {
+      "id": "visual_tensor",
+      "kind": "image",
+      "selectors": {
+        "svg": {
+          "element_id": "visual-tensor-slot"
+        },
+        "drawio": {
+          "cell_id": "visual-tensor-slot"
+        },
+        "pptx": {
+          "slide": 1,
+          "shape": "VISUAL_TENSOR"
+        }
+      }
+    },
+    {
+      "id": "graph_illustration",
+      "kind": "image",
+      "selectors": {
+        "svg": {
+          "element_id": "graph-slot"
+        },
+        "drawio": {
+          "cell_id": "graph-slot"
+        },
+        "pptx": {
+          "slide": 1,
+          "shape": "GRAPH_ILLUSTRATION"
+        }
+      }
+    },
+    {
+      "id": "attention_map",
+      "kind": "image",
+      "selectors": {
+        "svg": {
+          "element_id": "attention-slot"
+        },
+        "drawio": {
+          "cell_id": "attention-slot"
+        },
+        "pptx": {
+          "slide": 1,
+          "shape": "ATTENTION_MAP"
+        }
+      }
+    }
+  ]
+}

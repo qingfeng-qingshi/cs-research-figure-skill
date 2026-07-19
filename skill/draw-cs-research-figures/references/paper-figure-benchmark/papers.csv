@@ -1,0 +1,41 @@
+﻿id,venue,year,short_title,grammar,figure_slots,official_url
+cvpr25-magma,CVPR,2025,Magma,multi-domain agent pipeline,3,https://openaccess.thecvf.com/content/CVPR2025/html/Yang_Magma_A_Foundation_Model_for_Multimodal_AI_Agents_CVPR_2025_paper.html
+cvpr25-generalist-agent,CVPR,2025,Generalist Embodied Agent,training-to-deployment pipeline,3,https://openaccess.thecvf.com/content/CVPR2025/html/Szot_From_Multimodal_LLMs_to_Generalist_Embodied_Agents_Methods_and_Lessons_CVPR_2025_paper.html
+cvpr25-showui,CVPR,2025,ShowUI,GUI observation-action stream,3,https://openaccess.thecvf.com/content/CVPR2025/html/Lin_ShowUI_One_Vision-Language-Action_Model_for_GUI_Visual_Agent_CVPR_2025_paper.html
+cvpr25-dual-diffusion,CVPR,2025,Dual Diffusion,dual-branch diffusion architecture,3,https://openaccess.thecvf.com/content/CVPR2025/html/Li_Dual_Diffusion_for_Unified_Image_Generation_and_Understanding_CVPR_2025_paper.html
+cvpr25-videoglamm,CVPR,2025,VideoGLaMM,dual encoder with temporal decoder,3,https://openaccess.thecvf.com/content/CVPR2025/html/Munasinghe_VideoGLaMM__A_Large_Multimodal_Model_for_Pixel-Level_Visual_Grounding_CVPR_2025_paper.html
+cvpr26-agentdet,CVPR,2026,AgentDet,agent network with shared memory,2,https://openaccess.thecvf.com/content/CVPR2026/html/Li_AgentDet_A_Shared-Blackboard_Multi-Agent_Framework_for_Zero-Few-Shot_Object_Detection_CVPR_2026_paper.html
+cvpr26-refact,CVPR,2026,ReFAct,reason-focus-act feedback loop,2,https://openaccess.thecvf.com/content/CVPR2026/html/Wu_ReFAct_Empowering_Multimodal_Web_Agents_with_Visual_and_Context_Focusing_CVPR_2026_paper.html
+cvpr26-lenswalk,CVPR,2026,LensWalk,reason-plan-observe loop,2,https://openaccess.thecvf.com/content/CVPR2026/html/Li_LensWalk_Agentic_Video_Understanding_by_Planning_How_You_See_in_CVPR_2026_paper.html
+cvpr26-fantasyvln,CVPR,2026,FantasyVLN,multi-mode reasoning architecture,2,https://openaccess.thecvf.com/content/CVPR2026/html/Zuo_FantasyVLN_Unified_Multimodal_Chain-of-Thought_Reasoning_for_Vision-and-Language_Navigation_CVPR_2026_paper.html
+cvpr26-gui-dvlm,CVPR,2026,GUI Diffusion Agent,iterative masked grounding,2,https://openaccess.thecvf.com/content/CVPR2026/html/Kumbhar_Towards_GUI_Agents_Vision-Language_Diffusion_Models_for_GUI_Grounding_CVPR_2026_paper.html
+neurips25-vlv-ae,NeurIPS,2025,VLV Auto-Encoder,vision-language-vision bottleneck,3,https://proceedings.neurips.cc/paper_files/paper/2025/hash/71bd51ef7f4c92f84accb44366fec9d7-Abstract-Conference.html
+neurips25-dreamvla,NeurIPS,2025,DreamVLA,perception-prediction-action loop,3,https://proceedings.neurips.cc/paper_files/paper/2025/hash/22d4f952efa13970f0b1ffb22170d416-Abstract-Conference.html
+neurips25-lavida,NeurIPS,2025,LaViDa,diffusion VLM with sampling schedule,3,https://proceedings.neurips.cc/paper_files/paper/2025/hash/975affbe7b5f3b55fba62247b6877b1c-Abstract-Conference.html
+neurips25-gam-agent,NeurIPS,2025,GAM-Agent,specialist agents with critic controller,3,https://proceedings.neurips.cc/paper_files/paper/2025/hash/d38512ba4121046784528ad9984af74a-Abstract-Conference.html
+neurips25-agentnet,NeurIPS,2025,AgentNet,decentralized agent DAG,3,https://proceedings.neurips.cc/paper_files/paper/2025/hash/9a379c1b05793d1c42dc832269834515-Abstract-Conference.html
+neurips25-triangular-vlm,NeurIPS,2025,Triangular VLM Refinement,triangular consistency cycle,2,https://proceedings.neurips.cc/paper_files/paper/2025/hash/24966ec6bd42087ad050ad5a0fb689d6-Abstract-Conference.html
+neurips25-e2d2,NeurIPS,2025,E2D2,clean-token encoder and denoising decoder,2,https://proceedings.neurips.cc/paper_files/paper/2025/hash/172e31282df16359324717fcfbdbead3-Abstract-Conference.html
+neurips25-perceptionlm,NeurIPS,2025,PerceptionLM,data-model-evaluation pipeline,2,https://proceedings.neurips.cc/paper_files/paper/2025/hash/21f1c5bbf2519321c1bee9bfa9edcd46-Abstract-Conference.html
+neurips25-autovla,NeurIPS,2025,AutoVLA,sensor-reasoning-action pipeline,2,https://proceedings.neurips.cc/paper_files/paper/2025
+neurips25-holollm,NeurIPS,2025,HoloLLM,multi-lane sensor fusion,2,https://proceedings.neurips.cc/paper_files/paper/2025
+icml25-cross-modal-task,ICML,2025,Cross-Modal Task Vectors,cross-modal transfer map,3,https://icml.cc/virtual/2025/poster/46340
+icml25-ds-vlm,ICML,2025,DS-VLM,short-path supervision branch,3,https://icml.cc/virtual/2025/poster/45511
+icml25-moe-x,ICML,2025,MoE-X,router-to-expert bank,3,https://icml.cc/virtual/2025/poster/46377
+icml25-otter,ICML,2025,OTTER,text-conditioned visual selection,3,https://icml.cc/virtual/2025/poster/45131
+icml25-mils,ICML,2025,MILS,generate-score-refine loop,3,https://icml.cc/virtual/2025/poster/44693
+icml25-sparselora,ICML,2025,SparseLoRA,adapter injection with sparse paths,2,https://proceedings.mlr.press/v267/
+icml26-posteragent,ICML,2026,PosterAgent,stage-aware generation pipeline,2,https://icml.cc/Downloads/2026
+icml26-ibma,ICML,2026,IBMA,dual encoder with bottleneck bridge,2,https://icml.cc/Downloads/2026
+icml26-mose,ICML,2026,MoSE,slimmable expert routing,2,https://icml.cc/Downloads/2026
+icml26-moshirag,ICML,2026,MoshiRAG,asynchronous retrieval-generation lanes,2,https://icml.cc/Downloads/2026
+acl25-main-rag,ACL,2025,MAIN-RAG,parallel agents with consensus filter,3,https://aclanthology.org/2025.acl-long.131/
+acl25-kg-agent,ACL,2025,KG-Agent,LLM-tool-KG-memory loop,3,https://aclanthology.org/2025.acl-long.468/
+acl25-graph-records,ACL,2025,Graph of Records,retrieval-response bipartite graph,3,https://aclanthology.org/2025.acl-long.1159/
+acl25-agentic-reasoning,ACL,2025,Agentic Reasoning,tool agents with structured memory,3,https://aclanthology.org/2025.acl-long.1383/
+acl25-role-debate,ACL,2025,Role-Differentiated Debate,role-aware debate rounds,3,https://aclanthology.org/2025.acl-long.1105/
+acl26-octotools,ACL,2026,OctoTools,planner-executor tool cards,2,https://aclanthology.org/volumes/2026.acl-long/
+acl26-amata,ACL,2026,AMATA,six-agent dependency graph,2,https://aclanthology.org/2026.acl-long.359/
+acl26-sparkle,ACL,2026,SPARKLE,tree rollout retrieval controller,2,https://aclanthology.org/2026.acl-long.1793/
+acl26-longvideoagent,ACL,2026,LongVideoAgent,master-grounding-vision agent loop,2,https://aclanthology.org/2026.acl-long.1876/
+acl26-flowsearch,ACL,2026,FlowSearch,dynamic knowledge-flow graph,2,https://aclanthology.org/2026.acl-long.971/

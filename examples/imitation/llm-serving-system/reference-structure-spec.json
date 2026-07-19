@@ -1,0 +1,168 @@
+{
+  "id": "system-reference",
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "background": "#FFFFFF"
+  },
+  "title": "Scalable LLM Inference Service",
+  "panels": [
+    {
+      "id": "p1",
+      "label": "Inputs & Context",
+      "x": 35,
+      "y": 95,
+      "w": 410,
+      "h": 745,
+      "fill": "#F4F7FA"
+    },
+    {
+      "id": "p2",
+      "label": "Core Reasoning",
+      "x": 465,
+      "y": 95,
+      "w": 690,
+      "h": 745,
+      "fill": "#F7F3FA"
+    },
+    {
+      "id": "p3",
+      "label": "Actions & Objectives",
+      "x": 1175,
+      "y": 95,
+      "w": 390,
+      "h": 745,
+      "fill": "#F3F8F2"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "request",
+      "label": "API Request",
+      "subtitle": "",
+      "x": 90,
+      "y": 180,
+      "w": 290,
+      "h": 170,
+      "kind": "gateway",
+      "family": "software",
+      "fill": "#F9F0E4",
+      "stroke": "#D48345"
+    },
+    {
+      "id": "gateway",
+      "label": "API Gateway",
+      "subtitle": "",
+      "x": 520,
+      "y": 155,
+      "w": 240,
+      "h": 175,
+      "kind": "gateway",
+      "family": "software",
+      "fill": "#F9F0E4",
+      "stroke": "#D48345"
+    },
+    {
+      "id": "scheduler",
+      "label": "Batch Scheduler",
+      "subtitle": "",
+      "x": 820,
+      "y": 155,
+      "w": 240,
+      "h": 175,
+      "kind": "scheduler",
+      "family": "software",
+      "fill": "#F9F0E4",
+      "stroke": "#D48345"
+    },
+    {
+      "id": "workers",
+      "label": "GPU Model Workers",
+      "subtitle": "",
+      "x": 650,
+      "y": 475,
+      "w": 300,
+      "h": 190,
+      "kind": "gpu-worker",
+      "family": "software",
+      "fill": "#F9F0E4",
+      "stroke": "#D48345"
+    },
+    {
+      "id": "cache",
+      "label": "KV Cache",
+      "subtitle": "",
+      "x": 1225,
+      "y": 175,
+      "w": 285,
+      "h": 165,
+      "kind": "kv-cache",
+      "family": "llm",
+      "fill": "#EAF2F8",
+      "stroke": "#4C86B6"
+    },
+    {
+      "id": "response",
+      "label": "Streaming Response",
+      "subtitle": "",
+      "x": 1225,
+      "y": 500,
+      "w": 285,
+      "h": 165,
+      "kind": "event-stream",
+      "family": "software",
+      "fill": "#F9F0E4",
+      "stroke": "#D48345"
+    }
+  ],
+  "edges": [
+    {
+      "id": "r1",
+      "source": "request",
+      "target": "gateway",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r2",
+      "source": "gateway",
+      "target": "scheduler",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r3",
+      "source": "scheduler",
+      "target": "workers",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r4",
+      "source": "workers",
+      "target": "cache",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r5",
+      "source": "cache",
+      "target": "workers",
+      "label": "reuse",
+      "style": "dashed",
+      "color": "#8062A8"
+    },
+    {
+      "id": "r6",
+      "source": "workers",
+      "target": "response",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    }
+  ]
+}

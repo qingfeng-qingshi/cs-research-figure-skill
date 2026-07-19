@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker><filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#263C50" flood-opacity=".12"/></filter></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text id="figure-title" x="800.0" y="58" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#233B53">Prompt-Guided Vision Foundation Model</text>
+<g id="p1"><rect x="35" y="95" width="410" height="745" rx="25" fill="#F4F7FA" stroke="#CAD5DE" stroke-width="2"/><text x="57" y="133" font-family="Arial" font-size="21" font-weight="700" fill="#233B53">Inputs &amp; Context</text></g>
+<g id="p2"><rect x="465" y="95" width="690" height="745" rx="25" fill="#F7F3FA" stroke="#CAD5DE" stroke-width="2"/><text x="487" y="133" font-family="Arial" font-size="21" font-weight="700" fill="#233B53">Core Reasoning</text></g>
+<g id="p3"><rect x="1175" y="95" width="390" height="745" rx="25" fill="#F3F8F2" stroke="#CAD5DE" stroke-width="2"/><text x="1197" y="133" font-family="Arial" font-size="21" font-weight="700" fill="#233B53">Actions &amp; Objectives</text></g>
+<g id="t1"><path d="M 385.0 240.0 L 500.0 227.5" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t2"><path d="M 385.0 585.0 L 500.0 585.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t3"><path d="M 750.0 227.5 L 820.0 345.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t4"><path d="M 625.0 500.0 L 955.0 440.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t5"><path d="M 955.0 440.0 L 955.0 550.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t6"><path d="M 955.0 550.0 L 1365.0 320.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t7"><path d="M 1090.0 635.0 L 1215.0 472.5" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t8"><path d="M 955.0 440.0 L 1365.0 625.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="image" filter="url(#shadow)"><rect x="75" y="150" width="310" height="180" rx="18" fill="#EAF4EA" stroke="#5B9561" stroke-width="2.5"/>
+<rect x="165.1" y="188.0" width="60.7" height="63.0" rx="4.2" fill="#E8F1E5" stroke="#5B9561" stroke-width="2"/><line x1="185.0" y1="188.0" x2="185.0" y2="251.0" stroke="#FFFFFF" stroke-width="2"/><line x1="165.1" y1="208.7" x2="225.8" y2="208.7" stroke="#FFFFFF" stroke-width="2"/><line x1="204.9" y1="188.0" x2="204.9" y2="251.0" stroke="#FFFFFF" stroke-width="2"/><line x1="165.1" y1="229.4" x2="225.8" y2="229.4" stroke="#FFFFFF" stroke-width="2"/><rect x="242.6" y="198.8" width="8.4" height="40.5" rx="2.1" fill="#7FB9D7" stroke="#233B53" stroke-width="1"/><rect x="253.0" y="209.6" width="8.4" height="40.5" rx="2.1" fill="#91C49A" stroke="#233B53" stroke-width="1"/><rect x="263.5" y="198.8" width="8.4" height="40.5" rx="2.1" fill="#E6B26E" stroke="#233B53" stroke-width="1"/><rect x="273.9" y="209.6" width="8.4" height="40.5" rx="2.1" fill="#7FB9D7" stroke="#233B53" stroke-width="1"/><rect x="284.4" y="198.8" width="8.4" height="40.5" rx="2.1" fill="#91C49A" stroke="#233B53" stroke-width="1"/><line x1="227.9" y1="219.5" x2="239.4" y2="219.5" stroke="#4C86B6" stroke-width="3"/>
+<text x="230.0" y="299" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">High-Resolution Image</text>
+</g>
+<g id="prompt" filter="url(#shadow)"><rect x="75" y="500" width="310" height="170" rx="18" fill="#EAF2F8" stroke="#4C86B6" stroke-width="2.5"/>
+<rect x="165.1" y="537.0" width="47.1" height="55.3" rx="6.3" fill="#FFFFFF" stroke="#233B53" stroke-width="2"/><rect x="248.8" y="537.0" width="46.0" height="55.3" rx="6.3" fill="#E8F1E5" stroke="#5B9561" stroke-width="2"/><line x1="214.3" y1="564.2" x2="245.7" y2="564.2" stroke="#4C86B6" stroke-width="3"/><line x1="174.5" y1="550.6" x2="201.8" y2="550.6" stroke="#9CAEBB" stroke-width="2"/><line x1="174.5" y1="560.8" x2="201.8" y2="560.8" stroke="#9CAEBB" stroke-width="2"/><line x1="174.5" y1="571.0" x2="201.8" y2="571.0" stroke="#9CAEBB" stroke-width="2"/>
+<text x="230.0" y="639" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Text / Point Prompt</text>
+</g>
+<g id="visual" filter="url(#shadow)"><rect x="500" y="135" width="250" height="185" rx="18" fill="#EAF4EA" stroke="#5B9561" stroke-width="2.5"/>
+<rect x="587.0" y="172.6" width="69.2" height="53.7" rx="5.9" fill="#E7EFF6" stroke="#233B53" stroke-width="2"/><rect x="593.8" y="177.2" width="69.2" height="53.7" rx="5.9" fill="#D8E7F2" stroke="#233B53" stroke-width="2"/><rect x="600.5" y="181.8" width="69.2" height="53.7" rx="5.9" fill="#C8DFEC" stroke="#233B53" stroke-width="2"/><rect x="607.3" y="186.5" width="69.2" height="53.7" rx="5.9" fill="#B5D5E6" stroke="#233B53" stroke-width="2"/><line x1="609.0" y1="193.9" x2="657.1" y2="193.9" stroke="#FFFFFF" stroke-width="3"/><line x1="609.0" y1="207.7" x2="657.1" y2="207.7" stroke="#FFFFFF" stroke-width="3"/><line x1="609.0" y1="221.6" x2="657.1" y2="221.6" stroke="#FFFFFF" stroke-width="3"/><rect x="564.2" y="180.9" width="20.2" height="50.0" rx="2.5" fill="#E6F1E3" stroke="#5B9561" stroke-width="2"/><line x1="571.0" y1="180.9" x2="571.0" y2="230.9" stroke="#FFFFFF" stroke-width="2"/><line x1="564.2" y1="197.6" x2="584.5" y2="197.6" stroke="#FFFFFF" stroke-width="2"/><line x1="577.8" y1="180.9" x2="577.8" y2="230.9" stroke="#FFFFFF" stroke-width="2"/><line x1="564.2" y1="214.2" x2="584.5" y2="214.2" stroke="#FFFFFF" stroke-width="2"/><line x1="585.3" y1="205.9" x2="593.8" y2="205.9" stroke="#5B9561" stroke-width="3"/>
+<text x="625.0" y="289" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Vision Transformer</text>
+</g>
+<g id="promptenc" filter="url(#shadow)"><rect x="500" y="500" width="250" height="170" rx="18" fill="#EAF2F8" stroke="#4C86B6" stroke-width="2.5"/>
+<rect x="587.0" y="536.1" width="69.2" height="49.3" rx="5.9" fill="#E7EFF6" stroke="#233B53" stroke-width="2"/><rect x="593.8" y="540.4" width="69.2" height="49.3" rx="5.9" fill="#D8E7F2" stroke="#233B53" stroke-width="2"/><rect x="600.5" y="544.6" width="69.2" height="49.3" rx="5.9" fill="#C8DFEC" stroke="#233B53" stroke-width="2"/><rect x="607.3" y="548.9" width="69.2" height="49.3" rx="5.9" fill="#B5D5E6" stroke="#233B53" stroke-width="2"/><line x1="609.0" y1="555.7" x2="657.1" y2="555.7" stroke="#FFFFFF" stroke-width="3"/><line x1="609.0" y1="568.5" x2="657.1" y2="568.5" stroke="#FFFFFF" stroke-width="3"/><line x1="609.0" y1="581.2" x2="657.1" y2="581.2" stroke="#FFFFFF" stroke-width="3"/><rect x="576.1" y="594.8" width="10.1" height="10.2" rx="1.7" fill="#78B7D8" stroke="#233B53" stroke-width="1"/><rect x="590.4" y="594.8" width="10.1" height="10.2" rx="1.7" fill="#91C49A" stroke="#233B53" stroke-width="1"/><rect x="604.8" y="594.8" width="10.1" height="10.2" rx="1.7" fill="#E6B16D" stroke="#233B53" stroke-width="1"/><rect x="619.1" y="594.8" width="10.1" height="10.2" rx="1.7" fill="#78B7D8" stroke="#233B53" stroke-width="1"/><rect x="633.4" y="594.8" width="10.1" height="10.2" rx="1.7" fill="#91C49A" stroke="#233B53" stroke-width="1"/><rect x="647.8" y="594.8" width="10.1" height="10.2" rx="1.7" fill="#E6B16D" stroke="#233B53" stroke-width="1"/><line x1="668.9" y1="543.8" x2="668.9" y2="582.9" stroke="#8062A8" stroke-width="3"/><line x1="663.8" y1="577.8" x2="668.9" y2="583.8" stroke="#8062A8" stroke-width="3"/><line x1="673.9" y1="577.8" x2="668.9" y2="583.8" stroke="#8062A8" stroke-width="3"/>
+<text x="625.0" y="639" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Prompt Encoder</text>
+</g>
+<g id="cross" filter="url(#shadow)"><rect x="820" y="250" width="270" height="190" rx="18" fill="#EAF4EA" stroke="#5B9561" stroke-width="2.5"/>
+<circle cx="921.3" cy="317.5" r="16.4" fill="#D9EAF4" stroke="#4C86B6" stroke-width="2"/><circle cx="987.8" cy="317.5" r="16.4" fill="#E8E1F1" stroke="#8062A8" stroke-width="2"/><line x1="937.7" y1="317.5" x2="971.4" y2="317.5" stroke="#C96863" stroke-width="3"/><line x1="971.4" y1="331.8" x2="937.7" y2="331.8" stroke="#5B9561" stroke-width="2" stroke-dasharray="6 4"/><path d="M 980.5 316.6 l 6 7 l 13 -16" fill="none" stroke="#5B9561" stroke-width="4"/><rect x="893.9" y="289.0" width="16.4" height="17.1" rx="3.6" fill="#DDEBF4" stroke="#4C86B6" stroke-width="2"/><rect x="893.9" y="338.4" width="16.4" height="17.1" rx="3.6" fill="#F3E4D0" stroke="#D48345" stroke-width="2"/>
+<text x="955.0" y="389" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Cross-Modal</text>
+<text x="955.0" y="410" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Attention</text>
+</g>
+<g id="decoder" filter="url(#shadow)"><rect x="820" y="550" width="270" height="170" rx="18" fill="#EAF4EA" stroke="#5B9561" stroke-width="2.5"/>
+<rect x="902.1" y="589.5" width="77.5" height="49.3" rx="2.7" fill="#C8E0D1" stroke="#5B9561" stroke-width="2"/><rect x="922.2" y="597.2" width="59.2" height="39.1" rx="2.7" fill="#B6D7C2" stroke="#5B9561" stroke-width="2"/><rect x="942.2" y="604.9" width="41.0" height="28.9" rx="2.7" fill="#9DC9AD" stroke="#5B9561" stroke-width="2"/>
+<text x="955.0" y="689" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Multi-Scale Decoder</text>
+</g>
+<g id="mask" filter="url(#shadow)"><rect x="1215" y="145" width="300" height="175" rx="18" fill="#EAF4EA" stroke="#5B9561" stroke-width="2.5"/>
+<rect x="1304.2" y="180.8" width="121.5" height="65.6" rx="4.0" fill="#EAF2F8" stroke="#4C86B6" stroke-width="2"/><path d="M 1314.2 234.8 C 1338.2 200.8, 1362.2 250.8, 1384.2 208.8 C 1403.2 189.8, 1419.2 202.8, 1424.2 216.8 V 255.8 H 1304.2 Z" fill="#9ACB9C" opacity=".8"/>
+<text x="1365.0" y="289" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Open-Vocabulary Mask</text>
+</g>
+<g id="box" filter="url(#shadow)"><rect x="1215" y="385" width="300" height="175" rx="18" fill="#EAF4EA" stroke="#5B9561" stroke-width="2.5"/>
+<rect x="1304.2" y="420.8" width="121.5" height="65.6" rx="4.0" fill="#EAF2F8" stroke="#4C86B6" stroke-width="2"/><rect x="1322.5" y="433.9" width="35.4" height="27.1" rx="2.0" fill="none" stroke="#C96863" stroke-width="2"/><rect x="1367.0" y="440.0" width="42.5" height="33.3" rx="2.0" fill="none" stroke="#D48345" stroke-width="2"/>
+<text x="1365.0" y="529" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Grounded Boxes</text>
+</g>
+<g id="embed" filter="url(#shadow)"><rect x="1215" y="625" width="300" height="150" rx="18" fill="#EAF4EA" stroke="#5B9561" stroke-width="2.5"/>
+<rect x="1298.2" y="663.8" width="45.6" height="41.2" rx="6.1" fill="#DDECF5" stroke="#4C86B6" stroke-width="2"/><rect x="1386.3" y="663.8" width="45.6" height="41.2" rx="6.1" fill="#F2E7D7" stroke="#D48345" stroke-width="2"/><circle cx="1365.0" cy="684.0" r="10.5" fill="#E7DDF0" stroke="#8062A8" stroke-width="2"/><line x1="1343.7" y1="684.0" x2="1350.8" y2="684.0" stroke="#4C86B6" stroke-width="3"/><line x1="1379.2" y1="684.0" x2="1386.3" y2="684.0" stroke="#D48345" stroke-width="3"/>
+<text x="1365.0" y="744" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Aligned Embeddings</text>
+</g>
+</svg>

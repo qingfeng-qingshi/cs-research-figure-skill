@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker><filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#263C50" flood-opacity=".12"/></filter></defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text id="figure-title" x="800.0" y="58" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#233B53">Multi-Tenant Agentic LLM Serving Platform</text>
+<g id="p1"><rect x="35" y="95" width="410" height="745" rx="25" fill="#F4F7FA" stroke="#CAD5DE" stroke-width="2"/><text x="57" y="133" font-family="Arial" font-size="21" font-weight="700" fill="#233B53">Inputs &amp; Context</text></g>
+<g id="p2"><rect x="465" y="95" width="690" height="745" rx="25" fill="#F7F3FA" stroke="#CAD5DE" stroke-width="2"/><text x="487" y="133" font-family="Arial" font-size="21" font-weight="700" fill="#233B53">Core Reasoning</text></g>
+<g id="p3"><rect x="1175" y="95" width="390" height="745" rx="25" fill="#F3F8F2" stroke="#CAD5DE" stroke-width="2"/><text x="1197" y="133" font-family="Arial" font-size="21" font-weight="700" fill="#233B53">Actions &amp; Objectives</text></g>
+<g id="t1"><path d="M 390.0 240.0 L 495.0 217.5" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t2"><path d="M 390.0 580.0 L 495.0 560.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t3"><path d="M 745.0 217.5 L 800.0 217.5" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t4"><path d="M 620.0 305.0 L 620.0 465.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t5"><path d="M 925.0 305.0 L 925.0 465.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t6"><path d="M 745.0 560.0 L 800.0 560.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t7"><path d="M 925.0 465.0 L 1360.0 285.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t8"><path d="M 1360.0 285.0 L 925.0 465.0" fill="none" stroke="#8062A8" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#arrow)"/>
+<text x="1142.5" y="363.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#52677D" paint-order="stroke" stroke="#FFFFFF" stroke-width="7">reuse</text>
+</g>
+<g id="t9"><path d="M 745.0 560.0 L 1195.0 445.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t10"><path d="M 1050.0 560.0 L 1195.0 680.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="t11"><path d="M 1360.0 525.0 L 1360.0 605.0" fill="none" stroke="#4C86B6" stroke-width="4" marker-end="url(#arrow)"/>
+</g>
+<g id="request" filter="url(#shadow)"><rect x="70" y="155" width="320" height="170" rx="18" fill="#F9F0E4" stroke="#D48345" stroke-width="2.5"/>
+<rect x="156.6" y="204.8" width="41.0" height="34.0" rx="6.5" fill="#F3E4CF" stroke="#D48345" stroke-width="2"/><line x1="197.6" y1="221.8" x2="230.0" y2="221.8" stroke="#D48345" stroke-width="3"/><rect x="240.8" y="187.8" width="59.4" height="18.7" rx="5.4" fill="#E6EEF4" stroke="#4C86B6" stroke-width="2"/><line x1="230.0" y1="221.8" x2="240.8" y2="197.1" stroke="#4C86B6" stroke-width="2"/><rect x="240.8" y="213.2" width="59.4" height="18.7" rx="5.4" fill="#E6EEF4" stroke="#4C86B6" stroke-width="2"/><line x1="230.0" y1="221.8" x2="240.8" y2="222.6" stroke="#4C86B6" stroke-width="2"/><rect x="240.8" y="238.8" width="59.4" height="18.7" rx="5.4" fill="#E6EEF4" stroke="#4C86B6" stroke-width="2"/><line x1="230.0" y1="221.8" x2="240.8" y2="248.1" stroke="#4C86B6" stroke-width="2"/>
+<text x="230.0" y="294" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Tenant Requests</text>
+</g>
+<g id="events" filter="url(#shadow)"><rect x="70" y="500" width="320" height="160" rx="18" fill="#F9F0E4" stroke="#D48345" stroke-width="2.5"/>
+<rect x="165.2" y="555.2" width="129.6" height="17.6" rx="5.4" fill="#F4E4CD" stroke="#D48345" stroke-width="2"/><circle cx="178.2" cy="564.0" r="4.0" fill="#E5B376" stroke="#233B53" stroke-width="2"/><circle cx="204.1" cy="564.0" r="4.0" fill="#E5B376" stroke="#233B53" stroke-width="2"/><circle cx="230.0" cy="564.0" r="4.0" fill="#E5B376" stroke="#233B53" stroke-width="2"/><circle cx="255.9" cy="564.0" r="4.0" fill="#E5B376" stroke="#233B53" stroke-width="2"/><circle cx="281.8" cy="564.0" r="4.0" fill="#E5B376" stroke="#233B53" stroke-width="2"/>
+<text x="230.0" y="629" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Event Stream</text>
+</g>
+<g id="router" filter="url(#shadow)"><rect x="495" y="130" width="250" height="175" rx="18" fill="#F9F0E4" stroke="#D48345" stroke-width="2.5"/>
+<rect x="562.6" y="180.6" width="32.1" height="35.0" rx="5.1" fill="#F3E4CF" stroke="#D48345" stroke-width="2"/><line x1="594.7" y1="198.1" x2="620.0" y2="198.1" stroke="#D48345" stroke-width="3"/><rect x="628.4" y="163.1" width="46.4" height="19.3" rx="4.2" fill="#E6EEF4" stroke="#4C86B6" stroke-width="2"/><line x1="620.0" y1="198.1" x2="628.4" y2="172.8" stroke="#4C86B6" stroke-width="2"/><rect x="628.4" y="189.4" width="46.4" height="19.3" rx="4.2" fill="#E6EEF4" stroke="#4C86B6" stroke-width="2"/><line x1="620.0" y1="198.1" x2="628.4" y2="199.0" stroke="#4C86B6" stroke-width="2"/><rect x="628.4" y="215.6" width="46.4" height="19.3" rx="4.2" fill="#E6EEF4" stroke="#4C86B6" stroke-width="2"/><line x1="620.0" y1="198.1" x2="628.4" y2="225.2" stroke="#4C86B6" stroke-width="2"/>
+<text x="620.0" y="254" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Intent + Model</text>
+<text x="620.0" y="275" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Router</text>
+</g>
+<g id="scheduler" filter="url(#shadow)"><rect x="800" y="130" width="250" height="175" rx="18" fill="#F9F0E4" stroke="#D48345" stroke-width="2.5"/>
+<rect x="882.8" y="168.4" width="75.9" height="14.0" rx="3.4" fill="#B8D8E9" stroke="#233B53" stroke-width="2"/><rect x="882.8" y="189.4" width="60.8" height="14.0" rx="3.4" fill="#D9E8F1" stroke="#233B53" stroke-width="2"/><rect x="882.8" y="210.4" width="46.4" height="14.0" rx="3.4" fill="#F1DFC4" stroke="#233B53" stroke-width="2"/><line x1="965.5" y1="169.2" x2="965.5" y2="222.6" stroke="#D48345" stroke-width="3"/><line x1="962.1" y1="218.2" x2="965.5" y2="223.5" stroke="#D48345" stroke-width="3"/><line x1="968.9" y1="218.2" x2="965.5" y2="223.5" stroke="#D48345" stroke-width="3"/><circle cx="872.7" cy="196.4" r="11.0" fill="#FFFFFF" stroke="#D48345" stroke-width="2"/><line x1="872.7" y1="196.4" x2="872.7" y2="188.5" stroke="#D48345" stroke-width="2"/><line x1="872.7" y1="196.4" x2="879.4" y2="200.8" stroke="#D48345" stroke-width="2"/>
+<text x="925.0" y="274" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Priority Scheduler</text>
+</g>
+<g id="agents" filter="url(#shadow)"><rect x="495" y="465" width="250" height="190" rx="18" fill="#F1ECF7" stroke="#8062A8" stroke-width="2.5"/>
+<line x1="576.1" y1="511.6" x2="620.0" y2="502.1" stroke="#8062A8" stroke-width="2"/><line x1="620.0" y1="502.1" x2="663.9" y2="511.6" stroke="#8062A8" stroke-width="2"/><line x1="576.1" y1="511.6" x2="590.5" y2="559.1" stroke="#8062A8" stroke-width="2"/><line x1="620.0" y1="502.1" x2="590.5" y2="559.1" stroke="#8062A8" stroke-width="2"/><line x1="620.0" y1="502.1" x2="649.5" y2="559.1" stroke="#8062A8" stroke-width="2"/><line x1="663.9" y1="511.6" x2="649.5" y2="559.1" stroke="#8062A8" stroke-width="2"/><line x1="590.5" y1="559.1" x2="649.5" y2="559.1" stroke="#8062A8" stroke-width="2"/><circle cx="576.1" cy="511.6" r="8.4" fill="#A9D1E6" stroke="#233B53" stroke-width="2"/><circle cx="620.0" cy="502.1" r="8.4" fill="#E5B681" stroke="#233B53" stroke-width="2"/><circle cx="663.9" cy="511.6" r="8.4" fill="#A9CEA6" stroke="#233B53" stroke-width="2"/><circle cx="590.5" cy="559.1" r="8.4" fill="#C9B5DD" stroke="#233B53" stroke-width="2"/><circle cx="649.5" cy="559.1" r="8.4" fill="#E99F9B" stroke="#233B53" stroke-width="2"/>
+<text x="620.0" y="624" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Agent Worker Pool</text>
+</g>
+<g id="gpu" filter="url(#shadow)"><rect x="800" y="465" width="250" height="190" rx="18" fill="#F9F0E4" stroke="#D48345" stroke-width="2.5"/>
+<rect x="872.7" y="511.6" width="32.1" height="52.3" rx="4.2" fill="#D9EAF4" stroke="#4C86B6" stroke-width="2"/><rect x="910.7" y="511.6" width="32.1" height="52.3" rx="4.2" fill="#E4EDF3" stroke="#4C86B6" stroke-width="2"/><rect x="948.6" y="511.6" width="32.1" height="52.3" rx="4.2" fill="#E8E1F1" stroke="#4C86B6" stroke-width="2"/><circle cx="888.7" cy="537.2" r="6.8" fill="#F3C07F" stroke="#D48345" stroke-width="2"/><circle cx="926.7" cy="537.2" r="6.8" fill="#F3C07F" stroke="#D48345" stroke-width="2"/><circle cx="964.7" cy="537.2" r="6.8" fill="#F3C07F" stroke="#D48345" stroke-width="2"/>
+<text x="925.0" y="624" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">GPU Inference Pool</text>
+</g>
+<g id="cache" filter="url(#shadow)"><rect x="1195" y="125" width="330" height="160" rx="18" fill="#EAF2F8" stroke="#4C86B6" stroke-width="2.5"/>
+<rect x="1297.6" y="163.4" width="53.5" height="49.6" rx="6.7" fill="#D9E8F3" stroke="#4C86B6" stroke-width="2"/><rect x="1368.9" y="163.4" width="53.5" height="49.6" rx="6.7" fill="#E8E1F1" stroke="#8062A8" stroke-width="2"/><rect x="1307.7" y="173.0" width="8.9" height="30.4" rx="2.2" fill="#FFFFFF" stroke="#233B53" stroke-width="1"/><rect x="1321.0" y="173.0" width="8.9" height="30.4" rx="2.2" fill="#FFFFFF" stroke="#233B53" stroke-width="1"/><rect x="1334.4" y="173.0" width="8.9" height="30.4" rx="2.2" fill="#FFFFFF" stroke="#233B53" stroke-width="1"/><rect x="1378.9" y="173.0" width="8.9" height="30.4" rx="2.2" fill="#FFFFFF" stroke="#233B53" stroke-width="1"/><rect x="1392.3" y="173.0" width="8.9" height="30.4" rx="2.2" fill="#FFFFFF" stroke="#233B53" stroke-width="1"/><rect x="1405.7" y="173.0" width="8.9" height="30.4" rx="2.2" fill="#FFFFFF" stroke="#233B53" stroke-width="1"/>
+<text x="1360.0" y="254" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Paged KV Cache</text>
+</g>
+<g id="tools" filter="url(#shadow)"><rect x="1195" y="365" width="330" height="160" rx="18" fill="#F1ECF7" stroke="#8062A8" stroke-width="2.5"/>
+<rect x="1298.7" y="401.0" width="122.5" height="56.0" rx="11.1" fill="#F4E7D5" stroke="#D48345" stroke-width="2"/><rect x="1318.8" y="412.2" width="82.4" height="33.6" rx="4.5" fill="#FFFFFF" stroke="#233B53" stroke-width="2"/><line x1="1335.5" y1="421.0" x2="1354.4" y2="429.0" stroke="#233B53" stroke-width="3"/><line x1="1354.4" y1="429.0" x2="1335.5" y2="437.0" stroke="#233B53" stroke-width="3"/><line x1="1364.5" y1="437.8" x2="1392.3" y2="437.8" stroke="#4C86B6" stroke-width="3"/>
+<text x="1360.0" y="494" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Isolated Tool Runtime</text>
+</g>
+<g id="monitor" filter="url(#shadow)"><rect x="1195" y="605" width="330" height="150" rx="18" fill="#F9F0E4" stroke="#D48345" stroke-width="2.5"/>
+<rect x="1293.2" y="638.5" width="133.7" height="57.0" rx="5.6" fill="#EDF2F5" stroke="#4C86B6" stroke-width="2"/><line x1="1306.5" y1="680.5" x2="1327.7" y2="666.2" stroke="#4C86B6" stroke-width="3"/><line x1="1327.7" y1="666.2" x2="1348.9" y2="673.0" stroke="#4C86B6" stroke-width="3"/><line x1="1348.9" y1="673.0" x2="1372.3" y2="651.2" stroke="#5B9561" stroke-width="3"/><line x1="1372.3" y1="651.2" x2="1412.3" y2="659.5" stroke="#5B9561" stroke-width="3"/>
+<text x="1360.0" y="724" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#233B53">Metrics / Traces / Cost</text>
+</g>
+</svg>

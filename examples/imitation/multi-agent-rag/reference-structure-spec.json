@@ -1,0 +1,197 @@
+{
+  "id": "agent-reference",
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "background": "#FFFFFF"
+  },
+  "title": "Centralized Tool-Augmented Agent",
+  "panels": [
+    {
+      "id": "p1",
+      "label": "Inputs & Context",
+      "x": 35,
+      "y": 95,
+      "w": 410,
+      "h": 745,
+      "fill": "#F4F7FA"
+    },
+    {
+      "id": "p2",
+      "label": "Core Reasoning",
+      "x": 465,
+      "y": 95,
+      "w": 690,
+      "h": 745,
+      "fill": "#F7F3FA"
+    },
+    {
+      "id": "p3",
+      "label": "Actions & Objectives",
+      "x": 1175,
+      "y": 95,
+      "w": 390,
+      "h": 745,
+      "fill": "#F3F8F2"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "query",
+      "label": "User Query",
+      "subtitle": "",
+      "x": 90,
+      "y": 180,
+      "w": 290,
+      "h": 160,
+      "kind": "prompt",
+      "family": "llm",
+      "fill": "#EAF2F8",
+      "stroke": "#4C86B6"
+    },
+    {
+      "id": "planner",
+      "label": "Central Planner",
+      "subtitle": "",
+      "x": 555,
+      "y": 155,
+      "w": 250,
+      "h": 185,
+      "kind": "planner",
+      "family": "agent",
+      "fill": "#F1ECF7",
+      "stroke": "#8062A8"
+    },
+    {
+      "id": "retrieval",
+      "label": "Document Retrieval",
+      "subtitle": "",
+      "x": 850,
+      "y": 155,
+      "w": 250,
+      "h": 185,
+      "kind": "rag",
+      "family": "llm",
+      "fill": "#EAF2F8",
+      "stroke": "#4C86B6"
+    },
+    {
+      "id": "worker",
+      "label": "Single Worker Agent",
+      "subtitle": "",
+      "x": 555,
+      "y": 465,
+      "w": 250,
+      "h": 185,
+      "kind": "agent",
+      "family": "agent",
+      "fill": "#F1ECF7",
+      "stroke": "#8062A8"
+    },
+    {
+      "id": "memory",
+      "label": "Shared Memory",
+      "subtitle": "",
+      "x": 850,
+      "y": 465,
+      "w": 250,
+      "h": 185,
+      "kind": "memory",
+      "family": "agent",
+      "fill": "#F1ECF7",
+      "stroke": "#8062A8"
+    },
+    {
+      "id": "answer",
+      "label": "Final Answer",
+      "subtitle": "",
+      "x": 1225,
+      "y": 250,
+      "w": 285,
+      "h": 175,
+      "kind": "verifier",
+      "family": "agent",
+      "fill": "#F1ECF7",
+      "stroke": "#8062A8"
+    },
+    {
+      "id": "tools",
+      "label": "External Tools",
+      "subtitle": "",
+      "x": 1225,
+      "y": 520,
+      "w": 285,
+      "h": 175,
+      "kind": "tool",
+      "family": "software",
+      "fill": "#F9F0E4",
+      "stroke": "#D48345"
+    }
+  ],
+  "edges": [
+    {
+      "id": "r1",
+      "source": "query",
+      "target": "planner",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r2",
+      "source": "planner",
+      "target": "retrieval",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r3",
+      "source": "planner",
+      "target": "worker",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r4",
+      "source": "retrieval",
+      "target": "memory",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r5",
+      "source": "memory",
+      "target": "worker",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r6",
+      "source": "worker",
+      "target": "answer",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r7",
+      "source": "worker",
+      "target": "tools",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "r8",
+      "source": "tools",
+      "target": "worker",
+      "label": "result",
+      "style": "dashed",
+      "color": "#D48345"
+    }
+  ]
+}

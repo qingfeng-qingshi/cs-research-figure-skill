@@ -1,0 +1,223 @@
+{
+  "id": "vision-target",
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "background": "#FFFFFF"
+  },
+  "title": "Prompt-Guided Vision Foundation Model",
+  "panels": [
+    {
+      "id": "p1",
+      "label": "Inputs & Context",
+      "x": 35,
+      "y": 95,
+      "w": 410,
+      "h": 745,
+      "fill": "#F4F7FA"
+    },
+    {
+      "id": "p2",
+      "label": "Core Reasoning",
+      "x": 465,
+      "y": 95,
+      "w": 690,
+      "h": 745,
+      "fill": "#F7F3FA"
+    },
+    {
+      "id": "p3",
+      "label": "Actions & Objectives",
+      "x": 1175,
+      "y": 95,
+      "w": 390,
+      "h": 745,
+      "fill": "#F3F8F2"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "image",
+      "label": "High-Resolution Image",
+      "subtitle": "",
+      "x": 75,
+      "y": 150,
+      "w": 310,
+      "h": 180,
+      "kind": "patches",
+      "family": "vision",
+      "fill": "#EAF4EA",
+      "stroke": "#5B9561"
+    },
+    {
+      "id": "prompt",
+      "label": "Text / Point Prompt",
+      "subtitle": "",
+      "x": 75,
+      "y": 500,
+      "w": 310,
+      "h": 170,
+      "kind": "prompt",
+      "family": "llm",
+      "fill": "#EAF2F8",
+      "stroke": "#4C86B6"
+    },
+    {
+      "id": "visual",
+      "label": "Vision Transformer",
+      "subtitle": "",
+      "x": 500,
+      "y": 135,
+      "w": 250,
+      "h": 185,
+      "kind": "vit",
+      "family": "vision",
+      "fill": "#EAF4EA",
+      "stroke": "#5B9561"
+    },
+    {
+      "id": "promptenc",
+      "label": "Prompt Encoder",
+      "subtitle": "",
+      "x": 500,
+      "y": 500,
+      "w": 250,
+      "h": 170,
+      "kind": "llm",
+      "family": "llm",
+      "fill": "#EAF2F8",
+      "stroke": "#4C86B6"
+    },
+    {
+      "id": "cross",
+      "label": "Cross-Modal Attention",
+      "subtitle": "",
+      "x": 820,
+      "y": 250,
+      "w": 270,
+      "h": 190,
+      "kind": "alignment",
+      "family": "vision",
+      "fill": "#EAF4EA",
+      "stroke": "#5B9561"
+    },
+    {
+      "id": "decoder",
+      "label": "Multi-Scale Decoder",
+      "subtitle": "",
+      "x": 820,
+      "y": 550,
+      "w": 270,
+      "h": 170,
+      "kind": "fpn",
+      "family": "vision",
+      "fill": "#EAF4EA",
+      "stroke": "#5B9561"
+    },
+    {
+      "id": "mask",
+      "label": "Open-Vocabulary Mask",
+      "subtitle": "",
+      "x": 1215,
+      "y": 145,
+      "w": 300,
+      "h": 175,
+      "kind": "segmentation",
+      "family": "vision",
+      "fill": "#EAF4EA",
+      "stroke": "#5B9561"
+    },
+    {
+      "id": "box",
+      "label": "Grounded Boxes",
+      "subtitle": "",
+      "x": 1215,
+      "y": 385,
+      "w": 300,
+      "h": 175,
+      "kind": "detection",
+      "family": "vision",
+      "fill": "#EAF4EA",
+      "stroke": "#5B9561"
+    },
+    {
+      "id": "embed",
+      "label": "Aligned Embeddings",
+      "subtitle": "",
+      "x": 1215,
+      "y": 625,
+      "w": 300,
+      "h": 150,
+      "kind": "vlm",
+      "family": "vision",
+      "fill": "#EAF4EA",
+      "stroke": "#5B9561"
+    }
+  ],
+  "edges": [
+    {
+      "id": "t1",
+      "source": "image",
+      "target": "visual",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t2",
+      "source": "prompt",
+      "target": "promptenc",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t3",
+      "source": "visual",
+      "target": "cross",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t4",
+      "source": "promptenc",
+      "target": "cross",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t5",
+      "source": "cross",
+      "target": "decoder",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t6",
+      "source": "decoder",
+      "target": "mask",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t7",
+      "source": "decoder",
+      "target": "box",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t8",
+      "source": "cross",
+      "target": "embed",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "cs-research-figure-skill-tools",
+  "private": true,
+  "version": "0.4.0",
+  "description": "Optional PPTX template adapter for draw-cs-research-figures",
+  "type": "module",
+  "dependencies": {
+    "pptx-automizer": "^0.5.0",
+    "pptxgenjs": "^4.0.1"
+  }
+}

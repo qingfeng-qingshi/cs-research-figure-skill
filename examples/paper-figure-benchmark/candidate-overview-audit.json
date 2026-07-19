@@ -1,0 +1,19 @@
+[
+  {
+    "path": "examples\\paper-figure-benchmark\\candidate-overview.svg",
+    "verdict": "WARN",
+    "issues": [
+      {
+        "severity": "WARN",
+        "code": "grayscale-ambiguity",
+        "message": "Colors have similar grayscale luminance without redundant line/marker encoding: [('#377eb8', '#399170'), ('#377eb8', '#52677d'), ('#377eb8', '#785ea4'), ('#377eb8', '#a46722'), ('#399170', '#a46722'), ('#52677d', '#785ea4')]",
+        "path": "examples\\paper-figure-benchmark\\candidate-overview.svg"
+      }
+    ]
+  },
+  {
+    "path": "examples\\paper-figure-benchmark\\candidate-overview.png",
+    "verdict": "PASS",
+    "issues": []
+  }
+]

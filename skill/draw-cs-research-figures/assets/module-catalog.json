@@ -1,0 +1,603 @@
+{
+  "schema_version": "1.0",
+  "families": [
+    "llm",
+    "agent",
+    "vision",
+    "software"
+  ],
+  "modules": [
+    {
+      "id": "decoder-only-llm",
+      "family": "llm",
+      "name": "Decoder-only LLM",
+      "zh": "解码器大模型",
+      "aliases": [
+        "large language model",
+        "foundation model",
+        "GPT",
+        "大模型",
+        "基础模型"
+      ],
+      "primitive": "stacked decoder cards with token ports",
+      "semantics": "token sequence, causal mask, frozen/trainable state",
+      "icon": "llm",
+      "asset": "module-icons/decoder-only-llm.svg"
+    },
+    {
+      "id": "prompt-instruction",
+      "family": "llm",
+      "name": "Prompt / Instruction",
+      "zh": "提示词与指令",
+      "aliases": [
+        "system prompt",
+        "instruction tuning",
+        "prompt template",
+        "指令微调"
+      ],
+      "primitive": "document card feeding token cells",
+      "semantics": "system/user roles and prompt boundary",
+      "icon": "prompt",
+      "asset": "module-icons/prompt-instruction.svg"
+    },
+    {
+      "id": "rag-pipeline",
+      "family": "llm",
+      "name": "RAG Pipeline",
+      "zh": "检索增强生成",
+      "aliases": [
+        "retrieval augmented generation",
+        "retriever",
+        "evidence",
+        "RAG",
+        "检索增强"
+      ],
+      "primitive": "query-retrieve-rerank-generate chain",
+      "semantics": "top-k, provenance, retrieval boundary",
+      "icon": "rag",
+      "asset": "module-icons/rag-pipeline.svg"
+    },
+    {
+      "id": "vector-database",
+      "family": "llm",
+      "name": "Vector Database",
+      "zh": "向量数据库",
+      "aliases": [
+        "embedding index",
+        "ANN",
+        "FAISS",
+        "Milvus",
+        "向量库"
+      ],
+      "primitive": "database cylinder with embedding cells",
+      "semantics": "index/query direction and similarity metric",
+      "icon": "vector-db",
+      "asset": "module-icons/vector-database.svg"
+    },
+    {
+      "id": "reranker",
+      "family": "llm",
+      "name": "Reranker",
+      "zh": "重排序器",
+      "aliases": [
+        "cross encoder",
+        "relevance scoring",
+        "重排",
+        "相关性评分"
+      ],
+      "primitive": "ranked document stack",
+      "semantics": "candidate set and relevance scores",
+      "icon": "reranker",
+      "asset": "module-icons/reranker.svg"
+    },
+    {
+      "id": "lora-adapter",
+      "family": "llm",
+      "name": "LoRA / Adapter",
+      "zh": "低秩适配器",
+      "aliases": [
+        "PEFT",
+        "QLoRA",
+        "low rank adaptation",
+        "parameter efficient tuning",
+        "参数高效微调"
+      ],
+      "primitive": "narrow side branch beside frozen layer",
+      "semantics": "frozen base, rank/bottleneck and merge",
+      "icon": "lora",
+      "asset": "module-icons/lora-adapter.svg"
+    },
+    {
+      "id": "moe-routing",
+      "family": "llm",
+      "name": "Mixture of Experts",
+      "zh": "混合专家",
+      "aliases": [
+        "MoE",
+        "router",
+        "top-k experts",
+        "expert parallel",
+        "专家路由"
+      ],
+      "primitive": "router fan-out to expert bank",
+      "semantics": "routing score, top-k and combine",
+      "icon": "moe",
+      "asset": "module-icons/moe-routing.svg"
+    },
+    {
+      "id": "kv-cache",
+      "family": "llm",
+      "name": "KV Cache",
+      "zh": "键值缓存",
+      "aliases": [
+        "paged attention",
+        "prefix cache",
+        "continuous batching",
+        "推理缓存"
+      ],
+      "primitive": "paired K/V memory blocks",
+      "semantics": "sequence length, reuse and eviction",
+      "icon": "kv-cache",
+      "asset": "module-icons/kv-cache.svg"
+    },
+    {
+      "id": "alignment-training",
+      "family": "llm",
+      "name": "SFT / RLHF / DPO",
+      "zh": "大模型对齐训练",
+      "aliases": [
+        "preference optimization",
+        "reward model",
+        "human feedback",
+        "监督微调",
+        "偏好优化"
+      ],
+      "primitive": "policy-reward-preference loop",
+      "semantics": "policy, preference pairs and objective",
+      "icon": "alignment",
+      "asset": "module-icons/alignment-training.svg"
+    },
+    {
+      "id": "tool-calling",
+      "family": "llm",
+      "name": "Tool / Function Calling",
+      "zh": "工具与函数调用",
+      "aliases": [
+        "function calling",
+        "MCP",
+        "API tool",
+        "structured output",
+        "工具调用"
+      ],
+      "primitive": "LLM-to-tool request/result loop",
+      "semantics": "arguments, execution result and error path",
+      "icon": "tool",
+      "asset": "module-icons/tool-calling.svg"
+    },
+    {
+      "id": "planner-agent",
+      "family": "agent",
+      "name": "Planner Agent",
+      "zh": "规划智能体",
+      "aliases": [
+        "task decomposition",
+        "coordinator",
+        "orchestrator",
+        "规划器",
+        "协调器"
+      ],
+      "primitive": "planner card with task branches",
+      "semantics": "plan, subtask ownership and termination",
+      "icon": "planner",
+      "asset": "module-icons/planner-agent.svg"
+    },
+    {
+      "id": "role-agent",
+      "family": "agent",
+      "name": "Role Agent",
+      "zh": "角色智能体",
+      "aliases": [
+        "specialist agent",
+        "worker agent",
+        "researcher",
+        "coder",
+        "critic",
+        "专家智能体"
+      ],
+      "primitive": "person/agent node with role badge",
+      "semantics": "role, capability and local state",
+      "icon": "agent",
+      "asset": "module-icons/role-agent.svg"
+    },
+    {
+      "id": "multi-agent-network",
+      "family": "agent",
+      "name": "Multi-Agent Network",
+      "zh": "多智能体网络",
+      "aliases": [
+        "agent society",
+        "agent graph",
+        "collaboration",
+        "multi-agent",
+        "智能体协作"
+      ],
+      "primitive": "typed agent nodes with message edges",
+      "semantics": "communication topology and direction",
+      "icon": "multi-agent",
+      "asset": "module-icons/multi-agent-network.svg"
+    },
+    {
+      "id": "shared-memory",
+      "family": "agent",
+      "name": "Shared Memory",
+      "zh": "共享记忆",
+      "aliases": [
+        "blackboard",
+        "episodic memory",
+        "semantic memory",
+        "scratchpad",
+        "共享内存"
+      ],
+      "primitive": "memory bank connected to agents",
+      "semantics": "read/write boundary, scope and persistence",
+      "icon": "memory",
+      "asset": "module-icons/shared-memory.svg"
+    },
+    {
+      "id": "message-bus",
+      "family": "agent",
+      "name": "Message Bus",
+      "zh": "智能体消息总线",
+      "aliases": [
+        "event bus",
+        "mailbox",
+        "A2A",
+        "agent protocol",
+        "消息传递"
+      ],
+      "primitive": "horizontal bus with typed packets",
+      "semantics": "sender, receiver, ordering and protocol",
+      "icon": "message-bus",
+      "asset": "module-icons/message-bus.svg"
+    },
+    {
+      "id": "critic-verifier",
+      "family": "agent",
+      "name": "Critic / Verifier",
+      "zh": "批评与验证智能体",
+      "aliases": [
+        "judge",
+        "reviewer",
+        "self reflection",
+        "debate",
+        "验证器",
+        "反思"
+      ],
+      "primitive": "evaluation node returning feedback",
+      "semantics": "criteria, score and revision loop",
+      "icon": "verifier",
+      "asset": "module-icons/critic-verifier.svg"
+    },
+    {
+      "id": "environment-loop",
+      "family": "agent",
+      "name": "Environment Loop",
+      "zh": "环境交互闭环",
+      "aliases": [
+        "observation action loop",
+        "GUI agent",
+        "robot agent",
+        "环境反馈"
+      ],
+      "primitive": "observation-planning-action-feedback cycle",
+      "semantics": "state, observation, action and feedback",
+      "icon": "environment",
+      "asset": "module-icons/environment-loop.svg"
+    },
+    {
+      "id": "tool-sandbox",
+      "family": "agent",
+      "name": "Tool Sandbox",
+      "zh": "工具沙箱",
+      "aliases": [
+        "code execution",
+        "browser",
+        "shell",
+        "secure tool",
+        "代码执行沙箱"
+      ],
+      "primitive": "isolated tool container",
+      "semantics": "permission boundary and execution result",
+      "icon": "sandbox",
+      "asset": "module-icons/tool-sandbox.svg"
+    },
+    {
+      "id": "vision-transformer",
+      "family": "vision",
+      "name": "Vision Transformer",
+      "zh": "视觉Transformer",
+      "aliases": [
+        "ViT",
+        "Swin",
+        "visual encoder",
+        "image transformer",
+        "视觉编码器"
+      ],
+      "primitive": "patch tokens entering stacked attention blocks",
+      "semantics": "patch size, stage depth and feature scale",
+      "icon": "vit",
+      "asset": "module-icons/vision-transformer.svg"
+    },
+    {
+      "id": "patch-embedding",
+      "family": "vision",
+      "name": "Patch Embedding",
+      "zh": "图像块嵌入",
+      "aliases": [
+        "visual tokens",
+        "image patches",
+        "patchify",
+        "图像分块"
+      ],
+      "primitive": "image grid unfolding into token cells",
+      "semantics": "patch axis and embedding dimension",
+      "icon": "patches",
+      "asset": "module-icons/patch-embedding.svg"
+    },
+    {
+      "id": "feature-pyramid",
+      "family": "vision",
+      "name": "Feature Pyramid",
+      "zh": "特征金字塔",
+      "aliases": [
+        "FPN",
+        "multi-scale feature",
+        "pyramid pooling",
+        "多尺度特征"
+      ],
+      "primitive": "layered feature maps at decreasing resolution",
+      "semantics": "spatial scale, channels and fusion direction",
+      "icon": "fpn",
+      "asset": "module-icons/feature-pyramid.svg"
+    },
+    {
+      "id": "object-detection",
+      "family": "vision",
+      "name": "Detection Head",
+      "zh": "目标检测头",
+      "aliases": [
+        "YOLO",
+        "DETR",
+        "bounding box",
+        "classification head",
+        "目标检测"
+      ],
+      "primitive": "image with boxes plus class/box heads",
+      "semantics": "class, box, confidence and matching",
+      "icon": "detection",
+      "asset": "module-icons/object-detection.svg"
+    },
+    {
+      "id": "segmentation-decoder",
+      "family": "vision",
+      "name": "Segmentation Decoder",
+      "zh": "分割解码器",
+      "aliases": [
+        "semantic segmentation",
+        "instance mask",
+        "SAM",
+        "mask decoder",
+        "图像分割"
+      ],
+      "primitive": "feature decoder producing colored mask",
+      "semantics": "pixel/instance labels and resolution",
+      "icon": "segmentation",
+      "asset": "module-icons/segmentation-decoder.svg"
+    },
+    {
+      "id": "vision-language",
+      "family": "vision",
+      "name": "Vision-Language Model",
+      "zh": "视觉语言模型",
+      "aliases": [
+        "VLM",
+        "CLIP",
+        "multimodal LLM",
+        "visual instruction",
+        "多模态大模型"
+      ],
+      "primitive": "vision encoder and text encoder joined by bridge",
+      "semantics": "token interface, alignment and frozen state",
+      "icon": "vlm",
+      "asset": "module-icons/vision-language.svg"
+    },
+    {
+      "id": "diffusion-model",
+      "family": "vision",
+      "name": "Diffusion Model",
+      "zh": "扩散模型",
+      "aliases": [
+        "denoising",
+        "latent diffusion",
+        "U-Net",
+        "DiT",
+        "生成模型"
+      ],
+      "primitive": "noise-to-image timeline with conditional denoiser",
+      "semantics": "time step, condition and reverse process",
+      "icon": "diffusion",
+      "asset": "module-icons/diffusion-model.svg"
+    },
+    {
+      "id": "tracking-temporal",
+      "family": "vision",
+      "name": "Tracking / Temporal",
+      "zh": "跟踪与时序视觉",
+      "aliases": [
+        "MOT",
+        "video understanding",
+        "temporal attention",
+        "光流",
+        "目标跟踪"
+      ],
+      "primitive": "frame strip with linked object tracks",
+      "semantics": "time axis, identity and association",
+      "icon": "tracking",
+      "asset": "module-icons/tracking-temporal.svg"
+    },
+    {
+      "id": "three-d-vision",
+      "family": "vision",
+      "name": "3D Vision",
+      "zh": "三维视觉",
+      "aliases": [
+        "NeRF",
+        "3D Gaussian Splatting",
+        "point cloud",
+        "depth",
+        "三维重建"
+      ],
+      "primitive": "camera rays, point cloud and rendered view",
+      "semantics": "camera pose, geometry and rendering direction",
+      "icon": "3d",
+      "asset": "module-icons/three-d-vision.svg"
+    },
+    {
+      "id": "api-gateway",
+      "family": "software",
+      "name": "API Gateway",
+      "zh": "接口网关",
+      "aliases": [
+        "load balancer",
+        "request gateway",
+        "rate limit",
+        "API网关",
+        "负载均衡"
+      ],
+      "primitive": "gateway fan-out to services",
+      "semantics": "request route, tenant and policy",
+      "icon": "gateway",
+      "asset": "module-icons/api-gateway.svg"
+    },
+    {
+      "id": "task-scheduler",
+      "family": "software",
+      "name": "Scheduler / Queue",
+      "zh": "调度器与队列",
+      "aliases": [
+        "batching",
+        "job queue",
+        "priority queue",
+        "调度",
+        "任务队列"
+      ],
+      "primitive": "ordered queue entering scheduler",
+      "semantics": "priority, batch, resource and latency",
+      "icon": "scheduler",
+      "asset": "module-icons/task-scheduler.svg"
+    },
+    {
+      "id": "model-serving",
+      "family": "software",
+      "name": "Model Serving",
+      "zh": "模型服务",
+      "aliases": [
+        "inference server",
+        "vLLM",
+        "Triton",
+        "GPU worker",
+        "模型推理服务"
+      ],
+      "primitive": "router feeding replicated GPU workers",
+      "semantics": "replica, parallelism, batching and cache",
+      "icon": "gpu-worker",
+      "asset": "module-icons/model-serving.svg"
+    },
+    {
+      "id": "microservice",
+      "family": "software",
+      "name": "Microservice",
+      "zh": "微服务",
+      "aliases": [
+        "service mesh",
+        "distributed service",
+        "RPC",
+        "微服务架构"
+      ],
+      "primitive": "service cards connected by API/event edges",
+      "semantics": "service boundary, protocol and dependency",
+      "icon": "service",
+      "asset": "module-icons/microservice.svg"
+    },
+    {
+      "id": "event-stream",
+      "family": "software",
+      "name": "Event Stream",
+      "zh": "事件流",
+      "aliases": [
+        "Kafka",
+        "message queue",
+        "pub-sub",
+        "stream processing",
+        "消息队列"
+      ],
+      "primitive": "topic bus with producers and consumers",
+      "semantics": "topic, ordering, partition and direction",
+      "icon": "event-stream",
+      "asset": "module-icons/event-stream.svg"
+    },
+    {
+      "id": "cache-storage",
+      "family": "software",
+      "name": "Cache / Storage",
+      "zh": "缓存与存储",
+      "aliases": [
+        "Redis",
+        "database",
+        "object storage",
+        "缓存",
+        "数据库"
+      ],
+      "primitive": "cache blocks plus persistent cylinder",
+      "semantics": "read/write, consistency and lifetime",
+      "icon": "storage",
+      "asset": "module-icons/cache-storage.svg"
+    },
+    {
+      "id": "container-orchestration",
+      "family": "software",
+      "name": "Container Orchestration",
+      "zh": "容器编排",
+      "aliases": [
+        "Kubernetes",
+        "Docker",
+        "pod",
+        "autoscaling",
+        "容器",
+        "自动扩缩容"
+      ],
+      "primitive": "cluster boundary with replicated containers",
+      "semantics": "replica, placement and scaling",
+      "icon": "container",
+      "asset": "module-icons/container-orchestration.svg"
+    },
+    {
+      "id": "observability",
+      "family": "software",
+      "name": "Observability",
+      "zh": "可观测性",
+      "aliases": [
+        "metrics",
+        "logging",
+        "tracing",
+        "monitoring",
+        "日志",
+        "链路追踪"
+      ],
+      "primitive": "metrics/logs/traces feeding dashboard",
+      "semantics": "signal source, aggregation and alert",
+      "icon": "monitor",
+      "asset": "module-icons/observability.svg"
+    }
+  ]
+}

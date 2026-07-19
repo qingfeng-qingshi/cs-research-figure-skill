@@ -1,0 +1,247 @@
+{
+  "id": "agent-target",
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "background": "#FFFFFF"
+  },
+  "title": "Collaborative Multi-Agent RAG with Verification",
+  "panels": [
+    {
+      "id": "p1",
+      "label": "Inputs & Context",
+      "x": 35,
+      "y": 95,
+      "w": 410,
+      "h": 745,
+      "fill": "#F4F7FA"
+    },
+    {
+      "id": "p2",
+      "label": "Core Reasoning",
+      "x": 465,
+      "y": 95,
+      "w": 690,
+      "h": 745,
+      "fill": "#F7F3FA"
+    },
+    {
+      "id": "p3",
+      "label": "Actions & Objectives",
+      "x": 1175,
+      "y": 95,
+      "w": 390,
+      "h": 745,
+      "fill": "#F3F8F2"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "query",
+      "label": "Multimodal Request",
+      "subtitle": "",
+      "x": 90,
+      "y": 180,
+      "w": 290,
+      "h": 160,
+      "kind": "prompt",
+      "family": "llm",
+      "fill": "#EAF2F8",
+      "stroke": "#4C86B6"
+    },
+    {
+      "id": "planner",
+      "label": "Planner Agent",
+      "subtitle": "",
+      "x": 505,
+      "y": 140,
+      "w": 210,
+      "h": 165,
+      "kind": "planner",
+      "family": "agent",
+      "fill": "#F1ECF7",
+      "stroke": "#8062A8"
+    },
+    {
+      "id": "researcher",
+      "label": "Retrieval Agent",
+      "subtitle": "",
+      "x": 755,
+      "y": 140,
+      "w": 210,
+      "h": 165,
+      "kind": "rag",
+      "family": "agent",
+      "fill": "#F1ECF7",
+      "stroke": "#8062A8"
+    },
+    {
+      "id": "coder",
+      "label": "Tool Agent",
+      "subtitle": "",
+      "x": 1005,
+      "y": 140,
+      "w": 110,
+      "h": 165,
+      "kind": "sandbox",
+      "family": "agent",
+      "fill": "#F1ECF7",
+      "stroke": "#8062A8"
+    },
+    {
+      "id": "bus",
+      "label": "Agent Message Bus",
+      "subtitle": "",
+      "x": 555,
+      "y": 380,
+      "w": 510,
+      "h": 135,
+      "kind": "message-bus",
+      "family": "agent",
+      "fill": "#F1ECF7",
+      "stroke": "#8062A8"
+    },
+    {
+      "id": "memory",
+      "label": "Vector + Episodic Memory",
+      "subtitle": "",
+      "x": 555,
+      "y": 590,
+      "w": 240,
+      "h": 170,
+      "kind": "vector-db",
+      "family": "llm",
+      "fill": "#EAF2F8",
+      "stroke": "#4C86B6"
+    },
+    {
+      "id": "verifier",
+      "label": "Critic / Verifier",
+      "subtitle": "",
+      "x": 835,
+      "y": 590,
+      "w": 230,
+      "h": 170,
+      "kind": "verifier",
+      "family": "agent",
+      "fill": "#F1ECF7",
+      "stroke": "#8062A8"
+    },
+    {
+      "id": "answer",
+      "label": "Grounded Response",
+      "subtitle": "",
+      "x": 1225,
+      "y": 205,
+      "w": 285,
+      "h": 175,
+      "kind": "llm",
+      "family": "llm",
+      "fill": "#EAF2F8",
+      "stroke": "#4C86B6"
+    },
+    {
+      "id": "tools",
+      "label": "Tool Sandbox",
+      "subtitle": "",
+      "x": 1225,
+      "y": 520,
+      "w": 285,
+      "h": 175,
+      "kind": "sandbox",
+      "family": "software",
+      "fill": "#F9F0E4",
+      "stroke": "#D48345"
+    }
+  ],
+  "edges": [
+    {
+      "id": "t1",
+      "source": "query",
+      "target": "planner",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t2",
+      "source": "planner",
+      "target": "researcher",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t3",
+      "source": "planner",
+      "target": "coder",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t4",
+      "source": "planner",
+      "target": "bus",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t5",
+      "source": "researcher",
+      "target": "bus",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t6",
+      "source": "coder",
+      "target": "bus",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t7",
+      "source": "bus",
+      "target": "memory",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t8",
+      "source": "bus",
+      "target": "verifier",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t9",
+      "source": "verifier",
+      "target": "answer",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t10",
+      "source": "coder",
+      "target": "tools",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t11",
+      "source": "tools",
+      "target": "coder",
+      "label": "observation",
+      "style": "dashed",
+      "color": "#D48345"
+    }
+  ]
+}

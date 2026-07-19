@@ -1,0 +1,20 @@
+[
+  {
+    "path": "examples\\imitation\\multi-agent-rag\\target-redraw.svg",
+    "verdict": "WARN",
+    "issues": [
+      {
+        "severity": "WARN",
+        "code": "label-overlap",
+        "message": "Estimated overlapping text labels: [('Vector + Episodic', 'Memory')]",
+        "path": "examples\\imitation\\multi-agent-rag\\target-redraw.svg"
+      },
+      {
+        "severity": "INFO",
+        "code": "grayscale-redundancy",
+        "message": "Similar grayscale colors are backed by markers/dashes: [('#4c86b6', '#5b9561'), ('#4c86b6', '#8062a8'), ('#4c86b6', '#c96863'), ('#52677d', '#8062a8'), ('#5b9561', '#c96863'), ('#5b9561', '#d48345')]",
+        "path": "examples\\imitation\\multi-agent-rag\\target-redraw.svg"
+      }
+    ]
+  }
+]

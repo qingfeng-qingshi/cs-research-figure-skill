@@ -21,11 +21,13 @@ class DocumentationTests(unittest.TestCase):
         version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
         self.assertIn("## 使用", chinese)
         self.assertIn("### 用法五：检查已有科研图", chinese)
+        self.assertIn("### 用法七：自动修改 PPTX、SVG 或 Draw.io 模板", chinese)
         self.assertIn("## 命令行使用", chinese)
         self.assertIn("## Usage", english)
         self.assertIn("### Use case 5: audit an existing figure", english)
+        self.assertIn("### Use case 7: update an editable PPTX, SVG, or Draw.io template", english)
         self.assertIn("## CLI", english)
-        self.assertEqual(version, "0.3.1")
+        self.assertEqual(version, "0.5.1")
         self.assertFalse((ROOT / "RELEASE.md").exists())
 
 

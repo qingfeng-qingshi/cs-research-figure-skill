@@ -1,0 +1,13 @@
+{
+  "figure_title": "Graph-Guided Multimodal Learning with Adaptive Relation Fusion",
+  "visual_encoder": "Multi-scale Vision Encoder",
+  "language_encoder": "Contextual Language Encoder",
+  "graph_encoder": "Relational Graph Encoder",
+  "fusion_module": "Adaptive Graph-Guided Fusion",
+  "prediction_head": "Task Prediction Head",
+  "task_loss": "Task Supervision",
+  "alignment_loss": "Cross-modal Alignment",
+  "visual_tensor": "tensor-stack.svg",
+  "graph_illustration": "replacement-icon.svg",
+  "attention_map": "attention-map.svg"
+}

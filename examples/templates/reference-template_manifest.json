@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "template_id": "reference-reconstruction-demo",
+  "templates": {
+    "svg": "reference-reconstructed.svg"
+  },
+  "slots": [
+    {
+      "id": "title",
+      "kind": "text",
+      "required": false,
+      "selectors": {
+        "svg": {
+          "element_id": "title"
+        }
+      }
+    },
+    {
+      "id": "input-label",
+      "kind": "text",
+      "required": false,
+      "selectors": {
+        "svg": {
+          "element_id": "input-label"
+        }
+      }
+    },
+    {
+      "id": "local-icon",
+      "kind": "image",
+      "required": false,
+      "selectors": {
+        "svg": {
+          "element_id": "local-icon"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source": "synthetic-reference",
+    "method": "segmentation-to-editable-svg",
+    "note": "Reuse visual grammar only; verify scientific content and rights before publication."
+  }
+}

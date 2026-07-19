@@ -1,0 +1,247 @@
+{
+  "id": "system-target",
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "background": "#FFFFFF"
+  },
+  "title": "Multi-Tenant Agentic LLM Serving Platform",
+  "panels": [
+    {
+      "id": "p1",
+      "label": "Inputs & Context",
+      "x": 35,
+      "y": 95,
+      "w": 410,
+      "h": 745,
+      "fill": "#F4F7FA"
+    },
+    {
+      "id": "p2",
+      "label": "Core Reasoning",
+      "x": 465,
+      "y": 95,
+      "w": 690,
+      "h": 745,
+      "fill": "#F7F3FA"
+    },
+    {
+      "id": "p3",
+      "label": "Actions & Objectives",
+      "x": 1175,
+      "y": 95,
+      "w": 390,
+      "h": 745,
+      "fill": "#F3F8F2"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "request",
+      "label": "Tenant Requests",
+      "subtitle": "",
+      "x": 70,
+      "y": 155,
+      "w": 320,
+      "h": 170,
+      "kind": "gateway",
+      "family": "software",
+      "fill": "#F9F0E4",
+      "stroke": "#D48345"
+    },
+    {
+      "id": "events",
+      "label": "Event Stream",
+      "subtitle": "",
+      "x": 70,
+      "y": 500,
+      "w": 320,
+      "h": 160,
+      "kind": "event-stream",
+      "family": "software",
+      "fill": "#F9F0E4",
+      "stroke": "#D48345"
+    },
+    {
+      "id": "router",
+      "label": "Intent + Model Router",
+      "subtitle": "",
+      "x": 495,
+      "y": 130,
+      "w": 250,
+      "h": 175,
+      "kind": "gateway",
+      "family": "software",
+      "fill": "#F9F0E4",
+      "stroke": "#D48345"
+    },
+    {
+      "id": "scheduler",
+      "label": "Priority Scheduler",
+      "subtitle": "",
+      "x": 800,
+      "y": 130,
+      "w": 250,
+      "h": 175,
+      "kind": "scheduler",
+      "family": "software",
+      "fill": "#F9F0E4",
+      "stroke": "#D48345"
+    },
+    {
+      "id": "agents",
+      "label": "Agent Worker Pool",
+      "subtitle": "",
+      "x": 495,
+      "y": 465,
+      "w": 250,
+      "h": 190,
+      "kind": "multi-agent",
+      "family": "agent",
+      "fill": "#F1ECF7",
+      "stroke": "#8062A8"
+    },
+    {
+      "id": "gpu",
+      "label": "GPU Inference Pool",
+      "subtitle": "",
+      "x": 800,
+      "y": 465,
+      "w": 250,
+      "h": 190,
+      "kind": "gpu-worker",
+      "family": "software",
+      "fill": "#F9F0E4",
+      "stroke": "#D48345"
+    },
+    {
+      "id": "cache",
+      "label": "Paged KV Cache",
+      "subtitle": "",
+      "x": 1195,
+      "y": 125,
+      "w": 330,
+      "h": 160,
+      "kind": "kv-cache",
+      "family": "llm",
+      "fill": "#EAF2F8",
+      "stroke": "#4C86B6"
+    },
+    {
+      "id": "tools",
+      "label": "Isolated Tool Runtime",
+      "subtitle": "",
+      "x": 1195,
+      "y": 365,
+      "w": 330,
+      "h": 160,
+      "kind": "sandbox",
+      "family": "agent",
+      "fill": "#F1ECF7",
+      "stroke": "#8062A8"
+    },
+    {
+      "id": "monitor",
+      "label": "Metrics / Traces / Cost",
+      "subtitle": "",
+      "x": 1195,
+      "y": 605,
+      "w": 330,
+      "h": 150,
+      "kind": "monitor",
+      "family": "software",
+      "fill": "#F9F0E4",
+      "stroke": "#D48345"
+    }
+  ],
+  "edges": [
+    {
+      "id": "t1",
+      "source": "request",
+      "target": "router",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t2",
+      "source": "events",
+      "target": "agents",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t3",
+      "source": "router",
+      "target": "scheduler",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t4",
+      "source": "router",
+      "target": "agents",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t5",
+      "source": "scheduler",
+      "target": "gpu",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t6",
+      "source": "agents",
+      "target": "gpu",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t7",
+      "source": "gpu",
+      "target": "cache",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t8",
+      "source": "cache",
+      "target": "gpu",
+      "label": "reuse",
+      "style": "dashed",
+      "color": "#8062A8"
+    },
+    {
+      "id": "t9",
+      "source": "agents",
+      "target": "tools",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t10",
+      "source": "gpu",
+      "target": "monitor",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    },
+    {
+      "id": "t11",
+      "source": "tools",
+      "target": "monitor",
+      "label": "",
+      "style": "solid",
+      "color": "#4C86B6"
+    }
+  ]
+}

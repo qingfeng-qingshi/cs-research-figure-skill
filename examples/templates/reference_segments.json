@@ -1,0 +1,14 @@
+{
+  "template_id": "reference-reconstruction-demo",
+  "source": "synthetic-reference",
+  "canvas": {"width": 900, "height": 440, "background": "#ffffff"},
+  "regions": [
+    {"id": "title", "kind": "text", "bbox": [145, 25, 610, 42], "text": "Reference-Aware Editable Reconstruction", "font_size": 28, "font_weight": 700},
+    {"id": "input-box", "kind": "shape", "shape": "rect", "bbox": [80, 145, 210, 150], "fill": "#EAF3F8", "stroke": "#47789E", "radius": 18},
+    {"id": "input-label", "kind": "text", "bbox": [115, 195, 140, 34], "text": "Input Features", "font_size": 20, "font_weight": 600},
+    {"id": "flow-arrow", "kind": "connector", "bbox": [290, 210, 130, 20], "stroke": "#47789E"},
+    {"id": "local-icon", "kind": "image", "bbox": [445, 140, 220, 160], "asset": "replacement-icon.svg"},
+    {"id": "output-arrow", "kind": "connector", "bbox": [665, 210, 110, 20], "stroke": "#47789E"},
+    {"id": "output-node", "kind": "shape", "shape": "ellipse", "bbox": [775, 170, 90, 90], "fill": "#EAF4E8", "stroke": "#55945B"}
+  ]
+}

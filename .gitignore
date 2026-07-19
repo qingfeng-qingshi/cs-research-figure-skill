@@ -11,3 +11,6 @@ test-output/
 dist/
 *.zip
 *.egg-info/
+node_modules/
+.npm-cache/
+.cache/paper-figure-benchmark/
